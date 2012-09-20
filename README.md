@@ -3,6 +3,12 @@ django-kickstart
 
 An attempt to create a private django kickstart, please view this as "learn by doing" exceercise rather than a viable option for anyone other than me.
 
+Included packages
+
+* django-crispy-forms - for better form handling and twitter-bootstrap compatibility
+** http://django-crispy-forms.readthedocs.org/en/d-0/install.html#installing-django-crispy-forms
+** https://github.com/maraujop/django-crispy-forms
+
 
 Other requirements
 
