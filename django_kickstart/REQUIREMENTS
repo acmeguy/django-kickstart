@@ -1,0 +1,15 @@
+django
+
+#
+# Debugging and development tools
+#
+
+#
+# Applications
+#
+
+#
+# Utilities
+#
+docutils                #For Django Documentation - http://docutils.sourceforge.net/
+django-crispy-forms     #Better forms handling and bootstrap support
