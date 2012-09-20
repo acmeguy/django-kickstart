@@ -2,7 +2,13 @@ from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from tastypie.api import Api
+from filebrowser.sites import site
+
 admin.autodiscover()
+
+v1_api = Api(api_name='v1')
+#v1_api.register(EntryResource())
 
 urlpatterns = patterns('',
     # Examples:
@@ -11,7 +17,8 @@ urlpatterns = patterns('',
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    (r'^grappelli/', include('grappelli.urls')),
+    (r'^api/', include(v1_api.urls)),
+    url(r'^admin/filebrowser/', include(site.urls)),
 )

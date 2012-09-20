@@ -13,3 +13,8 @@ django
 #
 docutils                #For Django Documentation - http://docutils.sourceforge.net/
 django-crispy-forms     #Better forms handling and bootstrap support
+django-tastypie         #REST API
+
+# Admin
+django-grappelli        #Admin UI replacement
+django-filebrowser      #Admin filebrowser
