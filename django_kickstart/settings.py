@@ -30,7 +30,7 @@ USE_L10N = True
 USE_TZ = True
 
 
-MEDIA_ROOT = '' # Example: "/home/media/media.lawrence.com/media/"
+MEDIA_ROOT = '/var/www/django/django-kickstart/media/' # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_URL = '' # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 STATIC_ROOT = '' # Example: "/home/media/media.lawrence.com/static/"
 STATIC_URL = '/static/' # Example: "http://media.lawrence.com/static/"
