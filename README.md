@@ -11,20 +11,20 @@ Included packages
     * http://django-crispy-forms.readthedocs.org/en/d-0/install.html#installing-django-crispy-forms
 * django-tastypie - for all the REST API goodies
     * https://github.com/toastdriven/django-tastypie
-* django-grapelli - Seem to be back on track with their admin replacement
+* django-grapelli - Seem to be back on track with their fine admin UI enhancement
     * https://github.com/sehmaschine/django-grappelli
     * http://django-grappelli.readthedocs.org/en/2.4.2/index.html
 * django-filebrowser - for admin filebrowsing in grappelli
-    *
+    * https://github.com/sehmaschine/django-filebrowser
     * http://django-filebrowser.readthedocs.org/en/latest/
 
 Other requirements
 
 Sqlite3
 ==========
-
+Only if you want to keep this really light (admin/kickstart)
 ```
-# sudo apt-get install sqlite3  #If you want to keep this really light (admin/kickstart)
+# sudo apt-get install sqlite3
 ```
 
 PIL
