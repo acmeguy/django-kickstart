@@ -3,7 +3,7 @@
 #
 # Start configuration by declaring the debuging state
 #
-DEBUG = True
+DEBUG = False #todo - see local_settings.py for overrides
 TEMPLATE_DEBUG = DEBUG
 
 #
@@ -12,8 +12,8 @@ TEMPLATE_DEBUG = DEBUG
 DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'kickstart_db', # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'kickstart', # Or path to database file if using sqlite3.
         'USER': 'kickstart', # Not used with sqlite3.
         'PASSWORD': 'kickstart', # Not used with sqlite3.
         'HOST': 'localhost', # Set to empty string for localhost. Not used with sqlite3.
@@ -52,7 +52,7 @@ STATIC_URL = '/static/' # Example: "http://media.lawrence.com/static/"
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-# Example "/home/html/static" or "C:/www/django/static".
+    # Example "/home/html/static" or "C:/www/django/static".
 )
 # various locations.
 STATICFILES_FINDERS = (
@@ -91,7 +91,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware', #Clickjacking prevention
     'django.middleware.cache.FetchFromCacheMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'waffle.middleware.WaffleMiddleware',
     )
 
@@ -249,20 +248,6 @@ try:
         #print 'No local log settings found, is this production?'
         pass
 
-    try:
-        EXTERNAL_SERVICES = merge(EXTERNAL_SERVICES,EXTERNAL_SERVICES_OVERRIDE)
-    except Exception, e:
-        pass
-
-    try:
-        EXTERNAL_STATIC_FILES = merge(EXTERNAL_STATIC_FILES,EXTERNAL_STATIC_FILES_OVERRIDE)
-    except Exception, e:
-        pass
-
-    try:
-        INDEXING_SERVICES = merge(INDEXING_SERVICES,INDEXING_SERVICES_OVERRIDE)
-    except Exception, e:
-        pass
 
     try:
         CACHES = merge(CACHES,CACHES_OVERRIDE)
