@@ -4,7 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-# ('Your Name', 'your_email@example.com'),
+    ('Kickstarter', 'kickstart@kickstart.com'),
 )
 
 MANAGERS = ADMINS
@@ -21,14 +21,25 @@ DATABASES = {
     }
 }
 
+#
+# Site setup
+#
 SITE_ID = 1
+SECRET_KEY = '9s#ve$^0@b1v)(_!%+e(o#ea&amp;@*h+5hrkuspb#y+4!$paya!_@' # Make this unique, and don't share it with anybody.
+ROOT_URLCONF = 'kickstart.urls'
 
+#
+# Localization
+#
 TIME_ZONE = 'Atlantic/Reykjavik'
 LANGUAGE_CODE = 'is-is'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+#
+# Media files
+#
 MEDIA_ROOT = '/var/www/django/kickstart/media/' # Example: "/home/media/media.lawrence.com/media/"
 MEDIA_URL = '' # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 STATIC_ROOT = '' # Example: "/home/media/media.lawrence.com/static/"
@@ -38,19 +49,16 @@ STATIC_URL = '/static/' # Example: "http://media.lawrence.com/static/"
 STATICFILES_DIRS = (
 # Example "/home/html/static" or "C:/www/django/static".
 )
-
-# List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
     )
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = '9s#ve$^0@b1v)(_!%+e(o#ea&amp;@*h+5hrkuspb#y+4!$paya!_@'
+#
+# Templates
+#
 
-# List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
@@ -65,6 +73,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     )
 
+#
+# Middleware
+#
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -77,7 +89,7 @@ MIDDLEWARE_CLASSES = (
 
     )
 
-ROOT_URLCONF = 'kickstart.urls'
+
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'kickstart.wsgi.application'
