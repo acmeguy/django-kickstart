@@ -5,6 +5,7 @@ An attempt to create a private django kickstart, please view this as "learn by d
 This project includes all my favorite django modules and is *my* ideal starting point for a web application project.
 
 Included packages
+=================
 
 * docutils - just to get the django documentation working
 
@@ -50,9 +51,9 @@ Included packages
     * pip install raven
     * https://www.getsentry.com/docs/python/django/
 
-* sorl-thumbnail - Thumbnail creation and management
+* easy-thumbnails - Thumbnail creation and management
     * https://github.com/sorl/sorl-thumbnail
-    * http://sorl-thumbnail.readthedocs.org
+    * http://easy-thumbnails.readthedocs.org
 
 * django-appconf - Simple app configuration framework
     * http://django-appconf.readthedocs.org
@@ -64,6 +65,13 @@ Included packages
 * lxml      - xml manipulation
     * pip install lxml
 
+* django-celery - deferred/scheduled tasks
+    * http://pypi.python.org/pypi/django-celery
+    * Installs: kombu, anyjson, amqplib, billiard
+
+* django-userena - Usermanagement
+    * Installs: django-guardian
+    *
 
 Other requirements
 

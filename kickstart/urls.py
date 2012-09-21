@@ -21,5 +21,5 @@ urlpatterns = patterns('',
     (r'^grappelli/', include('grappelli.urls')),
     (r'^api/', include(v1_api.urls)),
     url(r'^admin/filebrowser/', include(site.urls)),
-    url(r'^admin_tools/', include('admin_tools.urls')),
+    (r'^accounts/', include('userena.urls')),
 )

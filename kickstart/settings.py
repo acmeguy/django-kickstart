@@ -94,7 +94,22 @@ MIDDLEWARE_CLASSES = (
     'waffle.middleware.WaffleMiddleware',
     )
 
+#
+# Authentication & login
+#
+AUTHENTICATION_BACKENDS = (
+    'userena.backends.UserenaAuthenticationBackend',
+    'guardian.backends.ObjectPermissionBackend',
+    'django.contrib.auth.backends.ModelBackend',
+    )
 
+LOGIN_REDIRECT_URL = '/accounts/%(username)s/'
+LOGIN_URL = '/accounts/signin/'
+LOGOUT_URL = '/accounts/signout/'
+ANONYMOUS_USER_ID = -1
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'kickstart.wsgi.application'
@@ -121,6 +136,7 @@ INSTALLED_APPS = (
     # Madnatory placement for devserver, django-grapelli & filebrowser
     'devserver',
     'grappelli',
+    'djcelery',
     'filebrowser',
     'django.contrib.admin',
     'django.contrib.admindocs',
@@ -131,12 +147,14 @@ INSTALLED_APPS = (
     'django_extensions',
     'debug_toolbar',
     'waffle',
-    'sorl.thumbnail',
     #
     # Utilities - applications/packages
     #
     'tastypie',
     'crispy_forms',
+    'userena',
+    'guardian',
+    'easy_thumbnails',
     #
     # Kickstart - Application
     #
@@ -149,34 +167,6 @@ INSTALLED_APPS = (
 GRAPPELLI_ADMIN_TITLE = 'Kickstart Admin'
 AUTOCOMPLETE_LIMIT = 20
 
-#
-# Development settings
-#
-INTERNAL_IPS = ('127.0.0.1',)
-
-DEVSERVER_MODULES = (
-    'devserver.modules.sql.SQLRealTimeModule',
-    'devserver.modules.sql.SQLSummaryModule',
-    'devserver.modules.profile.ProfileSummaryModule',
-
-    # Modules not enabled by default
-    'devserver.modules.ajax.AjaxDumpModule',
-    #'devserver.modules.profile.MemoryUseModule',
-    'devserver.modules.cache.CacheSummaryModule',
-    'devserver.modules.profile.LineProfilerModule',
-    )
-
-DEBUG_TOOLBAR_PANELS = (
-    'debug_toolbar.panels.version.VersionDebugPanel',
-    'debug_toolbar.panels.timer.TimerDebugPanel',
-    'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
-    'debug_toolbar.panels.headers.HeaderDebugPanel',
-    'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
-    'debug_toolbar.panels.template.TemplateDebugPanel',
-    'debug_toolbar.panels.sql.SQLDebugPanel',
-    'debug_toolbar.panels.signals.SignalDebugPanel',
-    'debug_toolbar.panels.logger.LoggingPanel',
-    )
 
 #
 # Caching

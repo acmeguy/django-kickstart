@@ -8,6 +8,7 @@ django-debug-toolbar    #in-page-debugging
 django-extensions       #plethora of goodies
 raven                   #sentry client for exception logging
 django-appconf          #App config
+django-waffle           #Feature flipping
 
 #
 # Applications
@@ -19,8 +20,10 @@ django-appconf          #App config
 docutils                #For Django Documentation - http://docutils.sourceforge.net/
 django-crispy-forms     #Better forms handling and bootstrap support
 django-tastypie         #REST API
-sorl-thumbnail          #Thumbnail creation and management
+easy-thumbnails         #Thumbnail creation and management
 requests                #HTTP communications library
+django-celery           #Deffered/Scheduled tasks
+pysolr                  #Solr communication
 
 # Admin
 django-grappelli        #Admin UI replacement
