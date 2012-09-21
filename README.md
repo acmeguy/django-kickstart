@@ -2,6 +2,7 @@ django-kickstart
 ================
 
 An attempt to create a private django kickstart, please view this as "learn by doing" exercise rather than a viable option for anyone other than me.
+This project includes all my favorite django modules and is *my* ideal starting point for a web application project.
 
 Included packages
 
