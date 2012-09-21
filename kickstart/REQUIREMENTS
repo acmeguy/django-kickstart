@@ -3,7 +3,8 @@ django
 #
 # Debugging and development tools
 #
-django-admin-tools      #Soo many goodies so little time
+django-devserver        #for complete debugging
+django-debug-toolbar    #in-page-debugging
 
 #
 # Applications

@@ -86,7 +86,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware', #Clickjacking prevention
     'django.middleware.cache.FetchFromCacheMiddleware',
-
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     )
 
 
@@ -119,6 +119,7 @@ INSTALLED_APPS = (
     #
     # Utils
     #
+    'debug_toolbar',
     'tastypie',
     'crispy_forms',
     #
@@ -136,6 +137,7 @@ AUTOCOMPLETE_LIMIT = 20
 #
 # Development settings
 #
+INTERNAL_IPS = ('127.0.0.1',)
 
 DEVSERVER_MODULES = (
     'devserver.modules.sql.SQLRealTimeModule',

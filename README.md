@@ -25,13 +25,16 @@ Included packages
 * python-memcached - Caching backend for the Django caching framework
     * http://www.tummy.com/Community/software/python-memcached/
 
-* django-devserver -
+* django-devserver - for complete debugging
     * https://github.com/dcramer/django-devserver
     * Reccomended packages:
         * pip install sqlparse
         * pip install werkzeug
         * pip install guppy #Not working correctly on my ubuntu 12.04 system (not looked into it)
         * pip install line_profiler
+
+* django-debug-toolbar - for some in-page-debugging
+    * https://github.com/dcramer/django-debug-toolbar
 
 Other requirements
 
