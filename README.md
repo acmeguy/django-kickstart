@@ -41,6 +41,14 @@ Included packages
     * # apt-get install libgraphviz-dev
     * pip install pygraphviz
 
+* django-waffle - feature flipping is nice to have when moving fast
+    * https://github.com/jsocol/django-waffle
+    * http://waffle.readthedocs.org/en/latest/index.html
+
+* raven - Sentry client for better exception logging
+    * pip install raven
+    * https://www.getsentry.com/docs/python/django/
+
 Other requirements
 
 Sqlite3

@@ -87,6 +87,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware', #Clickjacking prevention
     'django.middleware.cache.FetchFromCacheMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'waffle.middleware.WaffleMiddleware',
     )
 
 
@@ -119,11 +120,13 @@ INSTALLED_APPS = (
     'filebrowser',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'raven.contrib.django',
     #
     # Development Utilities
     #
     'django_extensions',
     'debug_toolbar',
+    'waffle',
     #
     # Utilities - applications/packages
     #

@@ -6,6 +6,7 @@ django
 django-devserver        #for complete debugging
 django-debug-toolbar    #in-page-debugging
 django-extensions       #plethora of goodies
+raven                   #Sentry client
 
 #
 # Applications
