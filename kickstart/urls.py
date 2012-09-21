@@ -12,8 +12,8 @@ v1_api = Api(api_name='v1')
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'django_kickstart.views.home', name='home'),
-    # url(r'^django_kickstart/', include('django_kickstart.foo.urls')),
+    # url(r'^$', 'kickstart.views.home', name='home'),
+    # url(r'^kickstart/', include('kickstart.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
