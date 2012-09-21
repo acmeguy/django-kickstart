@@ -7,6 +7,7 @@ django-devserver        #for complete debugging
 django-debug-toolbar    #in-page-debugging
 django-extensions       #plethora of goodies
 raven                   #sentry client for exception logging
+django-appconf          #App config
 
 #
 # Applications
@@ -19,6 +20,7 @@ docutils                #For Django Documentation - http://docutils.sourceforge.
 django-crispy-forms     #Better forms handling and bootstrap support
 django-tastypie         #REST API
 sorl-thumbnail          #Thumbnail creation and management
+requests                #HTTP communications library
 
 # Admin
 django-grappelli        #Admin UI replacement

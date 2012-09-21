@@ -1,14 +1,14 @@
-# Django settings for django_kickstart project.
+# coding=utf-8
 
+#
+# Start configuration by declaring the debuging state
+#
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-ADMINS = (
-    ('Kickstarter', 'kickstart@kickstart.com'),
-)
-
-MANAGERS = ADMINS
-
+#
+# Database connections
+#
 DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -27,6 +27,11 @@ DATABASES = {
 SITE_ID = 1
 SECRET_KEY = '9s#ve$^0@b1v)(_!%+e(o#ea&amp;@*h+5hrkuspb#y+4!$paya!_@' # Make this unique, and don't share it with anybody.
 ROOT_URLCONF = 'kickstart.urls'
+
+ADMINS = (
+    ('Kickstarter', 'kickstart@kickstart.com'),
+    )
+MANAGERS = ADMINS
 
 #
 # Localization

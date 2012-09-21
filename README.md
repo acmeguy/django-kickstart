@@ -53,6 +53,17 @@ Included packages
     * https://github.com/sorl/sorl-thumbnail
     * http://sorl-thumbnail.readthedocs.org
 
+* django-appconf - Simple app configuration framework
+    * http://django-appconf.readthedocs.org
+    * https://github.com/jezdez/django-appconf/
+
+* requests  - HTTP communications library
+    * pip install requests
+
+* lxml      - xml manipulation
+    * pip install lxml
+
+
 Other requirements
 
 Sqlite3
