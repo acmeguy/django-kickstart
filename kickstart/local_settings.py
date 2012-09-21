@@ -1,6 +1,7 @@
 # coding=utf-8
-# I use local settings to host development settings so that the main settings file
+# I use local_settings to host development settings so that the main settings file
 # always represents a production state. Values here are merged with the main settings file.
+# Settings can be replace all together, using the same variable names as in settings.py, or merged using the LOCAL_ prefix.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -26,7 +27,7 @@ LOCAL_MIDDLEWARE_CLASSES = (
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     )
 
-CACHES_OVERRIDE = {
+LOCAL_CACHES = {
     'default': {
         'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
         'LOCATION': '127.0.0.1:11211',

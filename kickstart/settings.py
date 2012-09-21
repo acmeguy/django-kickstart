@@ -250,7 +250,7 @@ try:
 
 
     try:
-        CACHES = merge(CACHES,CACHES_OVERRIDE)
+        CACHES = merge(CACHES,LOCAL_CACHES)
     except Exception, e:
         pass
 
