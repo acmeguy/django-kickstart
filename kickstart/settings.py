@@ -224,7 +224,7 @@ SENTRY_DSN = 'SENTRY_DSN' #todo replace this with a real sentry dns string
 #
 
 try:
-    from local_settings import *
+    from .local_settings import *
     from .utils.merge import merge
 
     try:
