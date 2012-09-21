@@ -101,6 +101,9 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    #
+    # Core Django applications
+    #
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -108,7 +111,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #
-    # Admin
+    # Admin and admin extensions
     #
     # Madnatory placement for devserver, django-grapelli & filebrowser
     'devserver',
@@ -117,9 +120,13 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     #
-    # Utils
+    # Development Utilities
     #
+    'django_extensions',
     'debug_toolbar',
+    #
+    # Utilities - applications/packages
+    #
     'tastypie',
     'crispy_forms',
     #

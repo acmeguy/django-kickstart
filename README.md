@@ -36,6 +36,11 @@ Included packages
 * django-debug-toolbar - for some in-page-debugging
     * https://github.com/dcramer/django-debug-toolbar
 
+* django-extensions - admin utilities (and model documentation tools)
+    * http://packages.python.org/django-extensions
+    * # apt-get install libgraphviz-dev
+    * pip install pygraphviz
+
 Other requirements
 
 Sqlite3
