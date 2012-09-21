@@ -3,6 +3,7 @@ django
 #
 # Debugging and development tools
 #
+django-admin-tools      #Soo many goodies so little time
 
 #
 # Applications
@@ -18,3 +19,8 @@ django-tastypie         #REST API
 # Admin
 django-grappelli        #Admin UI replacement
 django-filebrowser      #Admin filebrowser
+
+#
+# Caching
+#
+python-memcached        #Caching backend for the Django caching framework

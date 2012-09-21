@@ -6,29 +6,44 @@ An attempt to create a private django kickstart, please view this as "learn by d
 Included packages
 
 * docutils - just to get the django documentation working
+
 * django-crispy-forms - for better form handling and twitter-bootstrap compatibility
     * https://github.com/maraujop/django-crispy-forms
     * http://django-crispy-forms.readthedocs.org/en/d-0/install.html#installing-django-crispy-forms
+
 * django-tastypie - for all the REST API goodies
     * https://github.com/toastdriven/django-tastypie
+
 * django-grapelli - Seem to be back on track with their fine admin UI enhancement
     * https://github.com/sehmaschine/django-grappelli
     * http://django-grappelli.readthedocs.org/en/2.4.2/index.html
+
 * django-filebrowser - for admin filebrowsing in grappelli
     * https://github.com/sehmaschine/django-filebrowser
     * http://django-filebrowser.readthedocs.org/en/latest/
 
+* python-memcached - Caching backend for the Django caching framework
+    * http://www.tummy.com/Community/software/python-memcached/
+
+* django-devserver -
+    * https://github.com/dcramer/django-devserver
+    * Reccomended packages:
+        * pip install sqlparse
+        * pip install werkzeug
+        * pip install guppy #Not working correctly on my ubuntu 12.04 system (not looked into it)
+        * pip install line_profiler
+
 Other requirements
 
 Sqlite3
-==========
+=======
 Only if you want to keep this really light (admin/kickstart)
 ```
 # sudo apt-get install sqlite3
 ```
 
 PIL
-==========
+===
 
 Python imaging library needs to be built on Ubuntu 12.04 64bit and it's messy
 Here are the essentials (Paths may vary depending on architecture etc.)
