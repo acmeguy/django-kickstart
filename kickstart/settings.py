@@ -25,19 +25,19 @@ DATABASES = {
 # Site setup
 #
 SITE_ID = 1
-SECRET_KEY = '9s#ve$^0@b1v)(_!%+e(o#ea&amp;@*h+5hrkuspb#y+4!$paya!_@' # Make this unique, and don't share it with anybody.
+SECRET_KEY = '9s#ve$^0@b1v)(_!%+e(o#ea&amp;@*h+5hrkuspb#y+4!$paya!_@' #todo - Make this unique, and don't share it with anybody.
 ROOT_URLCONF = 'kickstart.urls'
 
 ADMINS = (
-    ('Kickstarter', 'kickstart@kickstart.com'),
+    ('Kickstarter', 'kickstart@kickstart.com'), #todo replace this with you'r email
     )
 MANAGERS = ADMINS
 
 #
 # Localization
 #
-TIME_ZONE = 'Atlantic/Reykjavik'
-LANGUAGE_CODE = 'is-is'
+TIME_ZONE = 'Atlantic/Reykjavik' #todo replace this with your timezone
+LANGUAGE_CODE = 'is-is'          #todo replace this with your locale
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
@@ -45,7 +45,7 @@ USE_TZ = True
 #
 # Media files
 #
-MEDIA_ROOT = '/var/www/django/kickstart/media/' # Example: "/home/media/media.lawrence.com/media/"
+MEDIA_ROOT = '/var/www/django/kickstart/media/' # Example: "/home/media/media.lawrence.com/media/" #todo replace this with your media root
 MEDIA_URL = '' # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 STATIC_ROOT = '' # Example: "/home/media/media.lawrence.com/static/"
 STATIC_URL = '/static/' # Example: "http://media.lawrence.com/static/"
@@ -218,4 +218,57 @@ LOGGING = {
     }
 }
 
-SENTRY_DSN = 'SENTRY_DSN'
+SENTRY_DSN = 'SENTRY_DSN' #todo replace this with a real sentry dns string
+
+#
+# Integration With Local Settings
+#
+
+try:
+    from local_settings import *
+    from .utils.merge import merge
+
+    try:
+        INSTALLED_APPS = INSTALLED_APPS + LOCAL_INSTALLED_APPS
+    except Exception, e:
+        pass
+
+    try:
+        TEMPLATE_DIRS = TEMPLATE_DIRS + LOCAL_TEMPLATE_DIRS
+    except Exception, e :
+        pass
+
+    try:
+        MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + LOCAL_MIDDLEWARE_CLASSES
+    except Exception, e :
+        pass
+
+    try:
+        LOGGING = merge(LOGGING,LOCAL_LOG_OVERRIDE)
+    except Exception, e:
+        #print 'No local log settings found, is this production?'
+        pass
+
+    try:
+        EXTERNAL_SERVICES = merge(EXTERNAL_SERVICES,EXTERNAL_SERVICES_OVERRIDE)
+    except Exception, e:
+        pass
+
+    try:
+        EXTERNAL_STATIC_FILES = merge(EXTERNAL_STATIC_FILES,EXTERNAL_STATIC_FILES_OVERRIDE)
+    except Exception, e:
+        pass
+
+    try:
+        INDEXING_SERVICES = merge(INDEXING_SERVICES,INDEXING_SERVICES_OVERRIDE)
+    except Exception, e:
+        pass
+
+    try:
+        CACHES = merge(CACHES,CACHES_OVERRIDE)
+    except Exception, e:
+        pass
+
+except Exception, e:
+    import logging
+    logging.warn('No local settings found... please use samples in the "configuration" directory for bootstrapping')
