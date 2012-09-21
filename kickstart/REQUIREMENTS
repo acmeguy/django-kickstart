@@ -18,6 +18,7 @@ raven                   #sentry client for exception logging
 docutils                #For Django Documentation - http://docutils.sourceforge.net/
 django-crispy-forms     #Better forms handling and bootstrap support
 django-tastypie         #REST API
+sorl-thumbnail          #Thumbnail creation and management
 
 # Admin
 django-grappelli        #Admin UI replacement

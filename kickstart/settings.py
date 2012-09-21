@@ -96,9 +96,9 @@ MIDDLEWARE_CLASSES = (
 WSGI_APPLICATION = 'kickstart.wsgi.application'
 
 TEMPLATE_DIRS = (
-# Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-# Always use forward slashes, even on Windows.
-# Don't forget to use absolute paths, not relative paths.
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
 )
 
 INSTALLED_APPS = (
@@ -127,6 +127,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'debug_toolbar',
     'waffle',
+    'sorl.thumbnail',
     #
     # Utilities - applications/packages
     #
@@ -156,7 +157,7 @@ DEVSERVER_MODULES = (
 
     # Modules not enabled by default
     'devserver.modules.ajax.AjaxDumpModule',
-    'devserver.modules.profile.MemoryUseModule',
+    #'devserver.modules.profile.MemoryUseModule',
     'devserver.modules.cache.CacheSummaryModule',
     'devserver.modules.profile.LineProfilerModule',
     )

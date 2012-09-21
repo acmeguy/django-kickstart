@@ -49,6 +49,10 @@ Included packages
     * pip install raven
     * https://www.getsentry.com/docs/python/django/
 
+* sorl-thumbnail - Thumbnail creation and management
+    * https://github.com/sorl/sorl-thumbnail
+    * http://sorl-thumbnail.readthedocs.org
+
 Other requirements
 
 Sqlite3
