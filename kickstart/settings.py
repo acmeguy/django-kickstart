@@ -150,6 +150,7 @@ INSTALLED_APPS = (
     #
     # Utilities - applications/packages
     #
+    'redis_cache.stats',
     'tastypie',
     'crispy_forms',
     'userena',
@@ -174,10 +175,39 @@ AUTOCOMPLETE_LIMIT = 20
 
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
-    }
+        'BACKEND': 'redis_cache.cache.RedisCache',
+        'LOCATION': 'localhost:6379',
+        'OPTIONS': {'DB': 1,},
+    },
 }
+
+#
+#
+#
+BROKER_BACKEND                  = "redis"
+BROKER_HOST                     = "localhost"
+BROKER_PORT                     = 6379
+BROKER_VHOST                    = "1"
+
+REDIS_CONNECT_RETRY             = True
+REDIS_HOST                      = "localhost"
+REDIS_PORT                      = 6379
+REDIS_DB                        = "0"
+
+CELERY_SEND_EVENTS              = True
+CELERYD_LOG_LEVEL               = 'INFO'
+CELERY_RESULT_BACKEND           = "redis"
+CELERY_TASK_RESULT_EXPIRES      = 25
+CELERYD_CONCURRENCY             = 8
+CELERYD_MAX_TASKS_PER_CHILD     = 10
+CELERY_ALWAYS_EAGER             = False
+
+SESSION_ENGINE                  = 'redis_sessions.session'
+SESSION_REDIS_HOST              = 'localhost'
+SESSION_REDIS_PORT              = 6379
+SESSION_REDIS_DB                = 0
+#SESSION_REDIS_PASSWORD         = 'password'
+SESSION_REDIS_PREFIX            = 'session'
 
 #
 # Logging

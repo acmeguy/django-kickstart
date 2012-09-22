@@ -99,6 +99,8 @@ Included Django packages
     * http://docs.django-userena.org/en/latest/index.html
     * Installs: django-guardian (fine grained access control)
 
+* django-redis-sessions -
+* django-redis
 
 Handy information
 =================

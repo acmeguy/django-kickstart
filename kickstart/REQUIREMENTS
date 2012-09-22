@@ -12,6 +12,9 @@ django-waffle           #Feature flipping
 SQLAlchemy              #Optional ORM for heavy lifting
 lxml                    #XML manipulation
 
+django-redis-sessions   #Redis session backend
+django-redis            #Redis caching
+
 #
 # Applications
 #
