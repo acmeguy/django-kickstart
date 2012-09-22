@@ -115,8 +115,6 @@ Handy information
 
 Redis
 =====
-after redis make and make install follow thse instructions:
-* http://ijonas.com/software-development/nosql/412/
 
 
 PIL
