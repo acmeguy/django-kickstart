@@ -9,10 +9,13 @@ django-extensions       #plethora of goodies
 raven                   #sentry client for exception logging
 django-appconf          #App config
 django-waffle           #Feature flipping
+SQLAlchemy              #Optional ORM for heavy lifting
+lxml                    #XML manipulation
 
 #
 # Applications
 #
+django-userena          #Local user registration and management
 
 #
 # Utilities

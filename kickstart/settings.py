@@ -108,6 +108,8 @@ LOGIN_URL = '/accounts/signin/'
 LOGOUT_URL = '/accounts/signout/'
 ANONYMOUS_USER_ID = -1
 
+AUTH_PROFILE_MODULE = 'kickstart.KickstartUserProfile'
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
@@ -144,8 +146,6 @@ INSTALLED_APPS = (
     #
     # Development Utilities
     #
-    'django_extensions',
-    'debug_toolbar',
     'waffle',
     #
     # Utilities - applications/packages
@@ -158,7 +158,7 @@ INSTALLED_APPS = (
     #
     # Kickstart - Application
     #
-
+    'kickstart', #todo - change these according to your needs
     )
 
 #

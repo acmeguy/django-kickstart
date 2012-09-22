@@ -21,6 +21,11 @@ DATABASES = {
 
 LOCAL_INSTALLED_APPS = (
     'devserver',
+    #
+    # Development Utilities
+    #
+    'django_extensions',
+    'debug_toolbar',
     )
 
 LOCAL_MIDDLEWARE_CLASSES = (
