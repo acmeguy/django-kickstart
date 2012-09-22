@@ -19,8 +19,9 @@ Common ground:
 Major Components/Servers
 ========================
 
-* Redis - Site and session caching as well as message queue
-* Posttgresql - or the database of choice
+* Django 1.4+
+* Redis - Site and session caching as well as message queue (RabbitMQ if huge)
+* Posttgres - or a database of choice
 * Solr - Advanced search
 * Sentry - Great exception logging and diagnostic
 * Node.js - Fan data out to all the connected clients from Redis messages sent by django apps
@@ -45,9 +46,6 @@ Included Django packages
 * django-filebrowser - for admin filebrowsing in grappelli
     * https://github.com/sehmaschine/django-filebrowser
     * http://django-filebrowser.readthedocs.org/en/latest/
-
-* python-memcached - Caching backend for the Django caching framework
-    * http://www.tummy.com/Community/software/python-memcached/
 
 * django-devserver - for complete debugging
     * https://github.com/dcramer/django-devserver
@@ -93,11 +91,23 @@ Included Django packages
     * http://pypi.python.org/pypi/django-celery
     * Installs: kombu, anyjson, amqplib, billiard
 
-* django-userena - Usermanagement
-    * Installs: django-guardian
-    *
+* kombu - Messaging framework (AMQP/Redis client +more)
+    * http://kombu.readthedocs.org/en/latest/index.html
 
-Other requirement
+* django-userena - Usermanagement
+    * https://github.com/bread-and-pepper/django-userena/
+    * http://docs.django-userena.org/en/latest/index.html
+    * Installs: django-guardian (fine grained access control)
+
+
+Handy information
+=================
+
+Redis
+=====
+after redis make and make install follow thse instructions:
+* http://ijonas.com/software-development/nosql/412/
+
 
 PIL
 ===
