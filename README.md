@@ -20,7 +20,7 @@ Major Components/Servers
 ========================
 
 * Django 1.4+
-* Redis - Site and session caching as well as message queue (RabbitMQ if huge)
+* Redis - Site and session caching as well as message queue (RabbitMQ if huge/high availability messaging)
 * Posttgres - or a database of choice
 * Solr - Advanced search
 * Sentry - Great exception logging and diagnostic
@@ -87,6 +87,21 @@ Included Django packages
 * lxml      - xml manipulation
     * pip install lxml
 
+* django-userena - Usermanagement
+    * https://github.com/bread-and-pepper/django-userena/
+    * http://docs.django-userena.org/en/latest/index.html
+    * Installs: django-guardian (fine grained access control)
+
+* django-redis
+    * https://github.com/niwibe/django-redis
+
+* django-redis-sessions -
+    * https://github.com/martinrusev/django-redis-sessions
+
+* dogpile.cache
+    * https://bitbucket.org/zzzeek/dogpile.cache
+    * http://dogpilecache.readthedocs.org/en/latest/index.html
+
 * django-celery - deferred/scheduled tasks
     * http://pypi.python.org/pypi/django-celery
     * Installs: kombu, anyjson, amqplib, billiard
@@ -94,13 +109,6 @@ Included Django packages
 * kombu - Messaging framework (AMQP/Redis client +more)
     * http://kombu.readthedocs.org/en/latest/index.html
 
-* django-userena - Usermanagement
-    * https://github.com/bread-and-pepper/django-userena/
-    * http://docs.django-userena.org/en/latest/index.html
-    * Installs: django-guardian (fine grained access control)
-
-* django-redis-sessions -
-* django-redis
 
 Handy information
 =================

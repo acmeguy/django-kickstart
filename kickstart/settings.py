@@ -181,6 +181,21 @@ CACHES = {
     },
 }
 
+"""
+from dogpile.cache import make_region
+
+region = make_region().configure(
+    'dogpile.cache.redis',
+    arguments = {
+        'host': 'localhost',
+        'port': 6379,
+        'db': 0,
+        'redis_expiration_time': 60*60*2,   # 2 hours
+        'distributed_lock':True
+    }
+)
+"""
+
 #
 #
 #
