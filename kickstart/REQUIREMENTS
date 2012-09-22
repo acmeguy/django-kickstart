@@ -9,28 +9,26 @@ django-extensions       #plethora of goodies
 raven                   #sentry client for exception logging
 django-appconf          #App config
 django-waffle           #Feature flipping
+django-tastypie         #REST API
+
+docutils                #For Django Documentation - http://docutils.sourceforge.net/
+
+#
+# Infrastructure
+#
 SQLAlchemy              #Optional ORM for heavy lifting
 lxml                    #XML manipulation
-
 django-redis-sessions   #Redis session backend
-django-redis            #Redis caching
-dogpile.cache           #
+django-crispy-forms     #Better forms handling and bootstrap support
+easy-thumbnails         #Thumbnail creation and management
+requests                #HTTP communications library
+django-celery           #Deffered/Scheduled tasks
+pysolr                  #Solr communication
 
 #
 # Applications
 #
 django-userena          #Local user registration and management
-
-#
-# Utilities
-#
-docutils                #For Django Documentation - http://docutils.sourceforge.net/
-django-crispy-forms     #Better forms handling and bootstrap support
-django-tastypie         #REST API
-easy-thumbnails         #Thumbnail creation and management
-requests                #HTTP communications library
-django-celery           #Deffered/Scheduled tasks
-pysolr                  #Solr communication
 
 # Admin
 django-grappelli        #Admin UI replacement
@@ -39,4 +37,5 @@ django-filebrowser      #Admin filebrowser
 #
 # Caching
 #
-python-memcached        #Caching backend for the Django caching framework
+django-redis            #Redis caching
+dogpile.cache           #
