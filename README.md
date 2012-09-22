@@ -26,7 +26,6 @@ Major Components/Servers
 * Sentry - Great exception logging and diagnostic
 * Node.js - Fan data out to all the connected clients from Redis messages sent by django apps
 
-
 Included Django packages
 ========================
 

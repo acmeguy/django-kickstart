@@ -12,6 +12,7 @@ django-waffle           #Feature flipping
 django-tastypie         #REST API
 
 docutils                #For Django Documentation - http://docutils.sourceforge.net/
+pygments                #Documentation
 
 #
 # Infrastructure
