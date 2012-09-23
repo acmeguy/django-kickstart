@@ -18,58 +18,9 @@
                 </h1>
             </div>
             <div class="row-fluid">
-                <ul class="thumbnails bordered">
-                    <li class="span6">
-                        <div class="row-fluid">
-                            <div class="span4 pull-center">
-                                <i class="icon-beaker enormous-icon circled  pull-center"></i>
-                            </div>
-                            <div class="span8">
-                                <h3> Web labs </h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row-fluid">
-                            <div class="span4 pull-center">
-                                <i class="icon-map-marker enormous-icon circled  pull-center"></i>
-                            </div>
-                            <div class="span8">
-                                <h3> Geolocation </h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="span6">
-                        <div class="row-fluid">
-                            <div class="span4 pull-center">
-                                <i class="icon-cloud enormous-icon circled  pull-center"></i>
-                            </div>
-                            <div class="span8">
-                                <h3> Cloud services </h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row-fluid">
-                            <div class="span4 pull-center">
-                                <i class="icon-comments-alt enormous-icon circled  pull-center"></i>
-                            </div>
-                            <div class="span8">
-                                <h3> Social apps </h3>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                {% with "123456" as items %}
+                {% include "web/elements/itemlist_2col.html" %}
+                {% endwith %}
             </div>
         </div>
     </section>
