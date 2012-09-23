@@ -1,0 +1,29 @@
+<!doctype html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+    <title>{% block titie %}{% endblock %}</title>
+    <meta name="description" content="Kickstar Reference Templates">
+    <meta name="viewport" content="width=device-width">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    {% include "web/snippets/style_header.html" %}
+    {% include "web/snippets/script_header.html" %}
+
+</head>
+<body class="theme">
+
+    {% include "web/elements/page_header.html" %}
+
+    <!-- Main Content -->
+    <div id="content" role="main">
+        {% block main_content %}{% endblock %}
+    </div>
+
+    {% include "web/elements/page_footer.html" %}
+    {% include "web/snippets/script_footer.html" %}
+</body>
+</html>

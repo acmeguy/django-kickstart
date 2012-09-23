@@ -74,11 +74,13 @@ TEMPLATE_LOADERS = (
 
 
 TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.debug',
     "django.contrib.auth.context_processors.auth",
     "django.core.context_processors.request",
     "django.core.context_processors.i18n",
     'django.contrib.messages.context_processors.messages',
     'django.core.context_processors.request',
+    'django.core.context_processors.static',
     )
 
 #
@@ -162,7 +164,9 @@ INSTALLED_APPS = (
     #
     # Kickstart - Application
     #
-    'kickstart', #todo - change these according to your needs
+    #todo - change these according to your needs
+    'kickstart',
+    'kickstart.web',
     )
 
 #

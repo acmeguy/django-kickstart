@@ -1,0 +1,21 @@
+<section id="promo" class="section alt">
+    <div class="container">
+        <div class="hero-unit">
+            <h1>{{ hero_title }}</h1>
+            {% if hero_paragraph %}<p>{{ hero_paragraph }}</p>{% endif %}
+        </div>
+        {% if hero_units %}
+        <div class="row-fluid">
+            {% for hero_unit in hero_units %}
+            <div class="well span3 pull-center">
+                <h3>
+                    <i class="icon-bullhorn huge-icon"></i>
+                    <span class="blocked">Kickstart</span>
+                </h3>
+                <p>Service description</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>

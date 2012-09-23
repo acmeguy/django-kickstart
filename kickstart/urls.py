@@ -12,7 +12,6 @@ v1_api = Api(api_name='v1')
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'kickstart.views.home', name='home'),
     # url(r'^kickstart/', include('kickstart.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
@@ -22,5 +21,11 @@ urlpatterns = patterns('',
     url(r'^api/', include(v1_api.urls)),
     url(r'^admin/filebrowser/', include(site.urls)),
     url(r'^accounts/', include('userena.urls')),
-    url(r'^redis/status/', include('redis_cache.stats.urls', namespace='redis_cache'))
+    url(r'^redis/status/', include('redis_cache.stats.urls', namespace='redis_cache')),
+
+    #
+    # Demo / reference content
+    #
+    url(r'^$', include('kickstart.web.urls')),
+    #url(r'^$', 'kickstart.web.urls', name='web'),
 )
