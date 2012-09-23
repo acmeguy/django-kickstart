@@ -1,0 +1,35 @@
+{% extends "web/base.html" %}
+
+{% block main_content %}
+    {% with "Our news" as hero_title %}
+    {% include "web/elements/hero_unit.html" %}
+    {% endwith %}
+
+    <section class="section">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span9">
+                    {% with "a" as figure %}
+                    {% with "a" as blog_footer %}
+                    {% for item in "1234" %}
+                        {% include "web/elements/blogpost.html" %}
+                    {% endfor %}
+                    {% endwith %}
+                    {% endwith %}
+                    <ul class="pager">
+                        <li class="previous">
+                            <a href="#"><i class=" icon-chevron-left"></i> Older</a>
+                        </li>
+                        <li class="next">
+                            <a href="#">Newer <i class=" icon-chevron-right"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <aside class="span3 sidebar">
+                    {% include "web/elements/blognav.html" %}
+                </aside>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,7 @@
+<div class="{% if forloop.first %}active {% endif %}item">
+    <div class="row-fluid">
+        {% for pricetag in "1234" %}
+            {% include "web/elements/pricetag.html" %}
+        {% endfor %}
+    </div>
+</div>

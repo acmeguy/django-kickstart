@@ -1,0 +1,9 @@
+{% load webdesign %}
+<blockquote class="blockquote-fancy {% if bq_small %}blockquote-fancy-small span6{% endif %}">
+    <div class="blockquote-img">
+        <img src="{{ STATIC_URL }}smartbiz/img/assets/people1-200x200.jpeg" alt="">
+    </div>
+    <p class="pull-center">"{% if bq_small %}{% lorem 10 w random %}{% else %}{% lorem 20 w random %}{% endif %}"
+        <a class="pull-center" href="#">Mary Doe, London</a>
+    </p>
+</blockquote>

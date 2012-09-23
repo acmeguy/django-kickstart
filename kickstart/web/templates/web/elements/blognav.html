@@ -1,0 +1,18 @@
+    <div class="sidebar-widget">
+        <h2 class="sidebar-header"> Search</h2>
+        <div class="input-append">
+            <input id="appendedInputButton" size="16" type="text"><button class="btn" type="button">Go!</button>
+        </div>
+    </div>
+    <div class="sidebar-widget">
+        <h2 class="sidebar-header">About SmartBiz</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        </p>
+    </div>
+    {% with "Recent posts" as list_title %}
+    {% include "web/elements/bloglist.html" %}
+    {% endwith %}
+    {% with "Popular posts" as list_title %}
+    {% include "web/elements/bloglist.html" %}
+    {% endwith %}
