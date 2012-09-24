@@ -1,25 +1,49 @@
 {% extends "web/base.html" %}
 
 {% block hero_unit %}
-    {% with "Timemachine" as hero_title  %}
-        {% include "web/elements/hero_unit.html" %}
-    {% endwith %}
+    <section id="promo" class="section alt">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span7">
+                    <div class="hero-unit">
+                        <h1>A portfolio item</h1>
+                        <p>and a small description can go here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. </p>
+                        <ul class="icons">
+                            <li>
+                                <i class="icon-ok"></i>CSS design
+                            </li>
+                            <li>
+                                <i class="icon-ok"></i>HTML markup
+                            </li>
+                            <li>
+                                <i class="icon-ok"></i>SEO and analytics
+                            </li>
+                            <li>
+                                <i class="icon-ok"></i>PHP development
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="span5">
+                    <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/ipad.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
 
 {% block main_content %}
     <section class="section">
         <div class="container">
-            <div class="page-header thumbnail-filters">
-                <h1>
-                    Filter <small><a href="#" data-filter="all" class="active"> all </a> /
-                    <a href="#" data-filter="people">people </a> /
-                    <a href="#" data-filter="abstract"> abstract </a> /
-                    <a href="#" data-filter="city"> city life</a></small>
-                </h1>
+            <div class="page-header">
+                <h1>Related items</h1>
             </div>
             <ul class="thumbnails bordered thumbnail-list">
                 {% with "4" as col_count %}
-                {% for item in "123456789012" %}
+                {% for item in "123" %}
                     {% include "web/elements/portfolio_list_item.html" %}
                 {% endfor %}
                 {% endwith %}
@@ -38,7 +62,4 @@
             </div>
         </div>
     </section>
-{% endblock %}
-
-{% block side_content %}
 {% endblock %}

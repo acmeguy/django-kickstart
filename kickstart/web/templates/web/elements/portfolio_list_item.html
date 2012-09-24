@@ -1,11 +1,12 @@
+{% load webdesign %}
 <li class="span{{ col_count }} filter-people">
     <!-- filter-city|filter-abstract| -->
-    <a href="portfolio-item.html">
+    <a href="{% url web:portfolio "sd" %}">
         <figure class="thumbnail-figure">
             <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/people1-600x400.jpeg" alt="">
             <figcaption class="thumbnail-title">
-                <h3><span>Lorem ipsum</span></h3>
-                <p><span>dolor sit amet</span></p>
+                <h3><span>{% lorem 2 w random %}</span></h3>
+                <p><span>{% lorem 3 w random %}</span></p>
             </figcaption>
         </figure>
     </a>
