@@ -125,7 +125,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     )
 
-LOGIN_REDIRECT_URL = '/accounts/%(username)s/'
+LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/accounts/signin/'
 LOGOUT_URL = '/accounts/signout/'
 ANONYMOUS_USER_ID = -1
@@ -218,7 +218,7 @@ region = make_region().configure(
     arguments = {
         'host': 'localhost',
         'port': 6379,
-        'db': 0,
+        'db':
         'redis_expiration_time': 60*60*2,   # 2 hours
         'distributed_lock':True
     }
