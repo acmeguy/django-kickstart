@@ -10,7 +10,7 @@
     {% with "a" as figure %}
     {% with "a" as blog_footer %}
     {% for item in "1234" %}
-        {% include "web/elements/blogpost.html" %}
+        {% include "web/elements/blogitem.html" %}
     {% endfor %}
     {% endwith %}
     {% endwith %}
@@ -26,4 +26,7 @@
 
 {% block side_content %}
     {% include "web/elements/blognav.html" %}
+{% endblock %}
+
+{% block sub_section %}
 {% endblock %}

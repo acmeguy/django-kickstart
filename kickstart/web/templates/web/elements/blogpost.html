@@ -2,26 +2,30 @@
 <article class="blog-post">
     <header class="blog-header">
         <h2>
-            {% lorem 3 w random %} <small>by <a href="#">{% lorem 2 w random %}</a>, 12 Nov 2012.</small>
+            {% lorem 3 w random %} <small>by <a href="#">{% lorem 2 w random %}</a>, 12 Sep 2012.</small>
         </h2>
     </header>
-    {% if figure %}
     <figure class="thumbnail-figure">
         <a href="post.html">
-            <!--img src="{{ STATIC_URL }}{{ SKIN }}img/assets/city1-870x300.jpeg" alt=""-->
-            <img src="http://lorempixel.com/q/870/300/city/{{ item }}" alt="">
+            <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/people1-870x400.jpeg" alt="">
         </a>
         <figcaption class="thumbnail-title">
             <h3>
-                <span>Lorem ipsum dolor sit amet</span>
+                <span>{% lorem 4 w random %}</span>
             </h3>
         </figcaption>
     </figure>
-    {% endif %}
     <p>{% lorem 1 p random %}</p>
     <p>{% lorem 1 p random %}</p>
+    <div class="row-fluid">
+        <p class="span6">
+            Vestibulum et dapibus orci. Vivamus non elit sed quam egestas egestas. Donec interdum ultrices ante ac pharetra. Praesent euismod augue erat, vel ornare sem. Morbi ante nisl, fringilla at commodo vitae, cursus aliquet lacus. Maecenas nec orci at est venenatis congue vitae eget justo. Aenean dui odio, eleifend sed viverra et, eleifend vitae tortor. Duis ac diam vitae risus aliquam tempor. Phasellus volutpat, metus porttitor ornare gravida, erat lacus bibendum lectus, et dictum tortor ligula a est. Proin id purus eget mi vestibulum accumsan. Nam scelerisque malesuada tellus vel laoreet. Vestibulum eleifend, risus ut faucibus iaculis, tellus lacus laoreet tellus, eget placerat tellus leo in magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sollicitudin blandit orci, at egestas tortor consectetur eu. Integer quam tellus, aliquet quis luctus id, porttitor eget eros. Fusce tempus metus metus.
+        </p>
+        <div class="span6">
+            <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/city3-400x400.jpeg" alt="">
+        </div>
+    </div>
     <p>{% lorem 1 p random %}</p>
-    {% if blog_footer %}
     <footer class="blog-footer row-fluid">
         <div class="span4 blog-categories">
             <i class="icon-pushpin"></i> <a href="#"> consectetur</a>
@@ -30,8 +34,16 @@
             <i class="icon-tags"></i> <a href="#"> fugiat, nulla, pariatur</a>
         </div>
         <div class="span4 blog-more">
-            <i class="icon-link"></i> <a href="post.html"> read more</a>
+            <i class="icon-comments"></i> <a href="#"> 3 comments</a>
         </div>
     </footer>
-    {% endif %}
 </article>
+
+<ul class="pager">
+    <li class="previous">
+        <a href="#"><i class=" icon-chevron-left"></i> Some post</a>
+    </li>
+    <li class="next">
+        <a href="#">Some other post <i class=" icon-chevron-right"></i></a>
+    </li>
+</ul>
