@@ -21,10 +21,13 @@
     <!-- Main Content -->
     <div id="content" role="main">
         {% block hero_unit %}{% endblock %}
-        <section id="content" class="section" role="main">
+        <section class="section">
             <div class="container">
                 <div class="row-fluid">
-                    <div class="span12">
+                    <aside class="span3 sidebar">
+                        {% block side_content %}{% endblock %}
+                    </aside>
+                    <div class="span9">
                         {% block main_content %}{% endblock %}
                     </div>
                 </div>
@@ -37,6 +40,7 @@
             </div>
         </section>
         {% endblock %}
+
     </div>
 
     {% include "web/elements/page_footer.html" %}

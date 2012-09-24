@@ -1,17 +1,11 @@
 {% extends "web/base.html" %}
 
-{% block main_content %}
+{% block hero_unit %}
     {% with "Full width blog" as hero_title  %}
         {% include "web/elements/hero_unit.html" %}
     {% endwith %}
+{% endblock %}
 
-    <section class="section">
-        <div class="container">
-            <div class="row-fluid">
-                <div class="span12">
-                    {% include "web/elements/blogpost.html" %}
-                </div>
-            </div>
-        </div>
-    </section>
+{% block main_content %}
+    {% include "web/elements/blogpost.html" %}
 {% endblock %}

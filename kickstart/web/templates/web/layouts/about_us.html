@@ -1,11 +1,15 @@
 {% extends "web/base.html" %}
 
-{% block main_content %}
-    <div id="content" role="main">
-        {% with "Making sure it's done right" as hero_title  %}
+{% block hero_unit %}
+    {% with "Making sure it's done right" as hero_title  %}
         {% include "web/elements/hero_unit.html" %}
-        {% endwith %}
+    {% endwith %}
+{% endblock %}
+
+{% block main_content %}
         {% include "web/elements/employees_overview.html" %}
-        {% include "web/elements/our_clients_overview.html" %}
-    </div>
+{% endblock %}
+
+{% block sub_content %}
+    {% include "web/elements/our_clients_overview.html" %}
 {% endblock %}
