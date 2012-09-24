@@ -4,5 +4,5 @@ from .views import Home
 
 urlpatterns = patterns('',
     # Signup, signin and signout
-    (r'^$', Home.as_view(template_name="web/layouts/about_us.html")),
+    (r'^$', Home.as_view(template_name="web/pages/about_us.html")),
 )

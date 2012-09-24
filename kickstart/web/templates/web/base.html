@@ -15,12 +15,11 @@
 
 </head>
 <body class="theme">
-
-    {% include "web/elements/page_header.html" %}
-
-    <!-- Main Content -->
+    {% block page_header %}{% include "web/elements/page_header.html" %}{% endblock %}
+    {% block page_body %}
     <div id="content" role="main">
         {% block hero_unit %}{% endblock %}
+        {% block main_section %}
         <section id="content" class="section" role="main">
             <div class="container">
                 <div class="row-fluid">
@@ -30,6 +29,7 @@
                 </div>
             </div>
         </section>
+        {% endblock %}
         {% block sub_section %}
         <section class="section alt">
             <div class="container">
@@ -38,8 +38,8 @@
         </section>
         {% endblock %}
     </div>
-
-    {% include "web/elements/page_footer.html" %}
-    {% include "web/snippets/script_footer.html" %}
+    {% endblock %}
+    {% block page_footer %}{% include "web/elements/page_footer.html" %}{% endblock %}
+    {% block scritp_footer %}{% include "web/snippets/script_footer.html" %}{% endblock %}
 </body>
 </html>
