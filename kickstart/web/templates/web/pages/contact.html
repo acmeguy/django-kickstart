@@ -1,0 +1,33 @@
+{% extends "web/base_rcol.html" %}
+
+{% block hero_unit %}
+    <div id="content" role="main">
+        {% with "Not so frequently asked questions" as hero_title  %}
+            {% include "web/elements/hero_unit.html" %}
+        {% endwith %}
+    </div>
+{% endblock %}
+
+{% block main_content %}
+    <article class="blog-post">
+        <header class="blog-header">
+            <h2>Got questions? <small> we got some answers </small></h2>
+        </header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+        {% with "123" as faqitems %}
+            {% for faqitem in faqitems %}
+                {% include "web/elements/faq_item.html" %}
+            {% endfor %}
+        {% endwith %}
+    </article>
+{% endblock %}
+
+{% block side_content %}
+    <div class="sidebar-widget">
+        <h2 class="sidebar-header">Want more?</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        </p>
+        <button type="submit" class="btn btn-primary">Send email</button>
+    </div>
+{% endblock %}
