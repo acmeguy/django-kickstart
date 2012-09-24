@@ -1,0 +1,40 @@
+{% load webdesign %}
+<article class="blog-post">
+    <header class="blog-header">
+        <h2>
+            {% lorem 3 w random %} <small>by <a href="#">{% lorem 2 w random %}</a>, 12 Sep 2012.</small>
+        </h2>
+    </header>
+    <figure class="thumbnail-figure">
+        <a href="post.html">
+            <img alt="" src="{{ STATIC_URL }}{{ SKIN }}img/assets/people1-870x400.jpeg">
+        </a>
+        <figcaption class="thumbnail-title">
+            <h3>
+                <span>{% lorem 3 w random %}</span>
+            </h3>
+        </figcaption>
+    </figure>
+    <p>{% lorem 3 p random %}</p>
+    <p>{% lorem 2 p random %}</p>
+    <div class="row-fluid">
+        <p class="span6">
+            <p>{% lorem 1 p random %}</p>
+        </p>
+        <div class="span6">
+            <img alt="" src="{{ STATIC_URL }}{{ SKIN }}img/assets/city3-400x400.jpeg">
+        </div>
+    </div>
+    <p>{% lorem 3 p random %}</p>
+    <footer class="blog-footer row-fluid">
+        <div class="span4 blog-categories">
+            <i class="icon-pushpin"></i> <a href="#"> consectetur</a>
+        </div>
+        <div class="span4 blog-tags">
+            <i class="icon-tags"></i> <a href="#"> fugiat, nulla, pariatur</a>
+        </div>
+        <div class="span4 blog-more">
+            <i class="icon-comments"></i> <a href="#"> 3 comments</a>
+        </div>
+    </footer>
+</article>

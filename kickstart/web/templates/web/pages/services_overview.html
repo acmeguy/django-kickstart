@@ -1,7 +1,6 @@
 {% extends "web/base.html" %}
 
-{% block main_content %}
-
+{% block hero_unit %}
     {% with "Services overview" as hero_title %}
     {% with "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam" as hero_paragraph %}
     {% with "1234" as  hero_units %}
@@ -9,20 +8,17 @@
     {% endwith %}
     {% endwith %}
     {% endwith %}
+{% endblock %}
 
-    <section class="section">
-        <div class="container">
-            <div class="page-header">
-                <h1>
-                    Future plans <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
-                </h1>
-            </div>
-            <div class="row-fluid">
-                {% with "123456" as items %}
-                {% include "web/elements/itemlist_2col.html" %}
-                {% endwith %}
-            </div>
-        </div>
-    </section>
-
+{% block main_content %}
+    <div class="page-header">
+        <h1>
+            Future plans <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
+        </h1>
+    </div>
+    <div class="row-fluid">
+        {% with "123" as items %}
+        {% include "web/elements/itemlist_2col.html" %}
+        {% endwith %}
+    </div>
 {% endblock %}
