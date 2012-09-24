@@ -1,0 +1,147 @@
+{% extends "web/base.html" %}
+
+{% block hero_unit %}
+    <section id="promo" class="section alt">
+        <div class="container">
+            <div class="hero-unit">
+                <h1>Our projects</h1>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block main_content %}
+    <section class="section">
+        <div class="container">
+
+            <div class="page-header thumbnail-filters">
+                <h1>
+                    Filter <small><a href="#" data-filter="all" class="active"> all </a> /
+                    <a href="#" data-filter="people">people </a> /
+                    <a href="#" data-filter="abstract"> abstract </a> /
+                    <a href="#" data-filter="city"> city life</a></small>
+                </h1>
+            </div>
+            <ul class="thumbnails bordered thumbnail-list">
+                <li class="span4 filter-people">
+                    <a href="portfolio-item.html">
+                        <figure class="thumbnail-figure">
+                            <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/people1-600x400.jpeg" alt="">
+                            <figcaption class="thumbnail-title">
+                                <h3><span>Lorem ipsum</span></h3>
+                                <p><span>dolor sit amet</span></p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="span4 filter-city">
+                    <a href="portfolio-item.html">
+                        <figure class="thumbnail-figure">
+                            <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/nightlife6-600x400.jpeg" alt="">
+                            <figcaption class="thumbnail-title">
+                                <h3><span>Consectetur</span></h3>
+                                <p><span>adipisicing elit</span></p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="span4 filter-city">
+                    <a href="portfolio-item.html">
+                        <figure class="thumbnail-figure">
+                            <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/city9-600x400.jpeg" alt="">
+                            <figcaption class="thumbnail-title">
+                                <h3><span>Tempor incididunt</span></h3>
+                                <p><span>ut labore et dolore</span></p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="span4 filter-abstract">
+                    <a href="portfolio-item.html">
+                        <figure class="thumbnail-figure">
+                            <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/abstract3-600x400.jpeg" alt="">
+                            <figcaption class="thumbnail-title">
+                                <h3><span>Magna aliqua</span></h3>
+                                <p><span>Ut enim ad minim</span></p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="span4 filter-people">
+                    <a href="portfolio-item.html">
+                        <figure class="thumbnail-figure">
+                            <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/fashion6-600x400.jpeg" alt="">
+                            <figcaption class="thumbnail-title">
+                                <h3><span>Veniam</span></h3>
+                                <p><span>Quis nostrud exercitation</span></p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="span4 filter-people">
+                    <a href="portfolio-item.html">
+                        <figure class="thumbnail-figure">
+                            <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/nightlife1-600x400.jpeg" alt="">
+                            <figcaption class="thumbnail-title">
+                                <h3><span>Ullamco laboris</span></h3>
+                                <p><span>nisi ut aliquip</span></p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="span4 filter-people">
+                    <a href="portfolio-item.html">
+                        <figure class="thumbnail-figure">
+                            <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/people5-600x400.jpeg" alt="">
+                            <figcaption class="thumbnail-title">
+                                <h3><span>Commodo</span></h3>
+                                <p><span>Duis aute irure dolor </span></p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="span4 filter-city">
+                    <a href="portfolio-item.html">
+                        <figure class="thumbnail-figure">
+                            <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/nightlife3-600x400.jpeg" alt="">
+                            <figcaption class="thumbnail-title">
+                                <h3><span>Reprehenderit</span></h3>
+                                <p><span>In velit esse</span></p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="span4 filter-city">
+                    <a href="portfolio-item.html">
+                        <figure class="thumbnail-figure">
+                            <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/city1-600x400.jpeg" alt="">
+                            <figcaption class="thumbnail-title">
+                                <h3><span>Cillum dolore</span></h3>
+                                <p><span>SEO manager</span></p>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}
+
+{% block sub_section %}
+    <section class="section alt">
+        <div class="container">
+            <div class="hero-unit pull-center">
+                <h1>Got a question?</h1>
+                <p>
+                    want to work with us to move your bussines to the next level? Well, dont be afraid
+                </p>
+                <a href="contact.html" class="btn btn-primary btn-large">
+                    contact us
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block side_content %}
+{% endblock %}

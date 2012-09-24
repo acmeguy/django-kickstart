@@ -11,4 +11,5 @@ urlpatterns = patterns('',
     url(r'^pricing/', Home.as_view(template_name="web/pages/pricing_overview.html"),name="pricing"),
     url(r'^services/', Home.as_view(template_name="web/pages/services_overview.html"),name="services"),
     url(r'^testimonials/', Home.as_view(template_name="web/pages/testimonials.html"),name="testimonials"),
+    url(r'^portfolio/', Home.as_view(template_name="web/pages/portfolio.html"),name="portfolio"),
 )

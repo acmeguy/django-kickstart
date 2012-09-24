@@ -9,22 +9,26 @@
 {% endblock %}
 
 {% block main_content %}
-    {% with "True" as bq_small %}
-    <div class="page-header">
-        <h1>
-            What other client said?
-        </h1>
+    <div class="container">
+        <div class="row-fluid">
+            {% with "True" as bq_small %}
+            <div class="page-header">
+                <h1>
+                    What other client said?
+                </h1>
+            </div>
+            <div class="row-fluid">
+                {% include "web/elements/blockquote.html" %}
+                {% include "web/elements/blockquote.html" %}
+            </div>
+            <hr>
+            <div class="row-fluid">
+                {% include "web/elements/blockquote.html" %}
+                {% include "web/elements/blockquote.html" %}
+            </div>
+            {% endwith %}
+        </div>
     </div>
-    <div class="row-fluid">
-        {% include "web/elements/blockquote.html" %}
-        {% include "web/elements/blockquote.html" %}
-    </div>
-    <hr>
-    <div class="row-fluid">
-        {% include "web/elements/blockquote.html" %}
-        {% include "web/elements/blockquote.html" %}
-    </div>
-    {% endwith %}
 {% endblock %}
 
 {% block sub_section %}

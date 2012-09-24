@@ -7,7 +7,15 @@
 {% endblock %}
 
 {% block main_content %}
-        {% include "web/elements/employees_overview.html" %}
+    <section id="content" class="section" role="main">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span12">
+                    {% include "web/elements/employees_overview.html" %}
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
 
 {% block sub_content %}
