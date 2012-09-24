@@ -5,7 +5,6 @@
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-IS_DEVELOPMENT = True
 
 DATABASES = {
     'default': {

@@ -106,9 +106,13 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    #
+    'raven.contrib.django.middleware.Sentry404CatchMiddleware',
+    'raven.contrib.django.middleware.SentryResponseErrorIdMiddleware',
+    #
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware', #Clickjacking prevention
-    #'django.middleware.cache.FetchFromCacheMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
     'waffle.middleware.WaffleMiddleware',
     )
 
@@ -172,16 +176,20 @@ INSTALLED_APPS = (
     'redis_cache.stats',
     'tastypie',
     'crispy_forms',
-    'userena',
-    'guardian',
-    'easy_thumbnails',
     #
     # Kickstart - Application
     #
     #todo - change these according to your needs
     'kickstart',
     'kickstart.web',
+    #
+    #
+    'userena',
+    'easy_thumbnails',
+    'guardian',
     )
+
+
 
 #
 # Grappelli settings
@@ -251,29 +259,50 @@ SESSION_REDIS_PREFIX            = 'session'
 
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
-    },
+    'disable_existing_loggers': True,
+    'root': {
+        'level': 'WARNING',
+        'handlers': ['sentry'],
+        },
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        },
     'handlers': {
-        'mail_admins': {
+        'sentry': {
             'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
+            'class': 'raven.contrib.django.handlers.SentryHandler',
+            },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
         }
     },
     'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
+        'django.db.backends': {
             'level': 'ERROR',
-            'propagate': True,
+            'handlers': ['console'],
+            'propagate': False,
+            },
+        'raven': {
+            'level': 'DEBUG',
+            'handlers': ['console'],
+            'propagate': False,
+            },
+        'sentry.errors': {
+            'level': 'DEBUG',
+            'handlers': ['console'],
+            'propagate': False,
+            },
         },
     }
-}
 
-SENTRY_DSN = 'SENTRY_DSN' #todo replace this with a real sentry dns string
+RAVEN_CONFIG = {
+    'dsn': 'http://c606da0badfd4a2b9cea0e1c104a8248:1b1d01e94ddc4481940a1e69c17a684e@192.168.1.109:9000/2',
+    'register_signals': True,
+}
 
 #
 # Integration With Local Settings

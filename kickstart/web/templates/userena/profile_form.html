@@ -1,0 +1,22 @@
+{% extends 'userena/base_userena.html' %}
+{% load i18n crispy_forms_tags %}
+{% block title %}{% trans "Account setup" %}{% endblock %}
+
+{% block content %}
+    <!--h1>{% blocktrans with profile.user.username as username %}Account &raquo; {{ username }}{% endblocktrans %}</h1-->
+    <form action="" enctype="multipart/form-data" method="post">
+        <ul id="box-nav" class="nav nav-pills">
+            <li><a href='{% url userena_profile_detail user.username %}'><span>{% trans 'View profile' %}</span></a></li>
+            <li class="active"><a href='{% url userena_profile_edit user.username %}'>{% trans "Edit profile" %}</a></li>
+            <li><a href='{% url userena_password_change user.username %}'>{% trans "Change password" %}</a></li>
+            <li><a href='{% url userena_email_change user.username %}'>{% trans "Change email" %}</a></li>
+        </ul>
+        {% csrf_token %}
+        <fieldset>
+            <legend>{% trans "Edit Profile" %}</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <button type="submit" class="btn btn-primary">{% trans "Save changes" %}</button>
+    </form>
+{% endblock %}
+

@@ -1,0 +1,109 @@
+<!doctype html>
+<html  lang="en">
+<head>
+    <!--
+
+    This template can not rely on any assistance from Django while rendering which is why it a complete template with
+    all references etc. Please do not replace it with some extension based, filter and tag filled alternative.
+
+    ---
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> -->
+    <title>Serious Trouble :: Kickstart</title>
+    <meta name="viewport" content="width=device-width">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="/static/kicktheme/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/kicktheme/img/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/kicktheme/img/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/kicktheme/img/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/kicktheme/img/ico/apple-touch-icon-57-precomposed.png">
+
+
+    <link rel="stylesheet" href="/static/kicktheme/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/kicktheme/css/responsive.css">
+    <link rel="stylesheet" href="/static/kicktheme/css/font-awesome.css">
+    <link rel="stylesheet" href="/static/kicktheme/css/theme.css">
+    <link rel="stylesheet" href="/static/kicktheme/css/fonts.css">
+
+
+</head>
+<body class="theme">
+
+<!-- Page Header -->
+<header id="masthead">
+    <nav class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <h1 class="brand">
+                    <a href="/">Kickstart
+                        <i class="icon-beaker"></i>
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<!-- Main Content -->
+<div id="content" role="main">
+
+    <section id="promo" class="section alt">
+        <div class="container">
+            <div class="hero-unit">
+                <h1>Oh, what the hell happened here?</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span12">
+                    <article class="blog-post">
+                        <header class="blog-header">
+                            <h2>This bug will be squashed <small>with a mammoth like precision!</small></h2>
+                        </header>
+                        {% if request.sentry.id %}
+                        <p>If you need assistance, you may reference this error as <strong>{{ request.sentry.id }}</strong>.</p>
+                        {% endif %}
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!-- Page Footer -->
+<footer  id="footer" role="contentinfo" class="section">
+    <div class="container">
+        <div class="row-fluid">
+        </div>
+    </div>
+</footer>
+
+
+<!-- JavaScript -->
+
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/static/kicktheme/js/libs/jquery.min.js"><\/script>')</script>
+
+<!-- Load boostrap and custom scripts -->
+<script src="/static/kicktheme/js/bootstrap.min.js"></script>
+<script src="/static/kicktheme/js/script.js"></script>
+<!-- end scripts -->
+
+
+</body>
+</html>

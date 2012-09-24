@@ -1,0 +1,25 @@
+{% extends "web/base.html" %}
+
+{% block hero_unit %}
+    {% with "You lost?" as hero_title  %}
+        {% include "web/elements/hero_unit.html" %}
+    {% endwith %}
+{% endblock %}
+
+{% block main_content %}
+    <section id="content" class="section" role="main">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span12">
+                    <p>Oh shoot, no one should ever find this place!</p>
+                    {% if request.sentry.id %}
+                        <p>If you need assistance, you may reference this error as <strong>{{ request.sentry.id }}</strong>.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block sub_section %}
+{% endblock %}

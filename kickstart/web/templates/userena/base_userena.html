@@ -1,0 +1,20 @@
+{% extends "web/base.html" %}
+
+{% block hero_unit %}
+{% endblock %}
+
+{% block main_content %}
+    <section id="content" class="section" role="main">
+        <div class="container">
+            <div class="row-fluid">
+                <div class="span12">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block sub_section %}
+{% endblock %}
