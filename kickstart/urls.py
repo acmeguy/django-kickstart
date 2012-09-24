@@ -26,6 +26,6 @@ urlpatterns = patterns('',
     #
     # Demo / reference content
     #
-    url(r'^$', include('kickstart.web.urls')),
+    url(r'^', include('kickstart.web.urls',namespace='web')),
     #url(r'^$', 'kickstart.web.urls', name='web'),
 )

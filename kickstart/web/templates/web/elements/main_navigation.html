@@ -23,11 +23,11 @@
                         <li class="dropdown active">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Features</a>
                             <ul class="dropdown-menu">
-                                <li><a href="about.html">About us page</a></li>
-                                <li><a href="services.html">Services page</a></li>
-                                <li><a href="faq.html">FAQ page</a></li>
-                                <li><a href="pricing.html">Pricing</a></li>
-                                <li><a href="testimonials.html">Testimonials</a></li>
+                                <li><a href="{% url web:about %}">About us page</a></li>
+                                <li><a href="{% url web:services %}">Services page</a></li>
+                                <li><a href="{% url web:faq %}">FAQ page</a></li>
+                                <li><a href="{% url web:pricing %}">Pricing</a></li>
+                                <li><a href="{% url web:testimonials %}">Testimonials</a></li>
                                 <li><a href="../pages/blog_overview.html">Blog</a></li>
                                 <li><a href="post.html">Single post</a></li>
                                 <li><a href="sidebar-right.html">Right sidebar</a></li>
