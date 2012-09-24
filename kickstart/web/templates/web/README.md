@@ -4,4 +4,6 @@ A collection of popular re-usable templates using a close-to-vanilla bootstrap m
 
 Snippets store infrastructure components
 Elements store content components
-Layouts store different layouts
+Pages store different page layouts
+
+base documents are found in this directory.

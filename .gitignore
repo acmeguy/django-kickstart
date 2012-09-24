@@ -27,4 +27,5 @@ pip-log.txt
 .mr.developer.cfg
 
 bootstrap_src
-smartbiz
+kicktheme
+local_settings.py

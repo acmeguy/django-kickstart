@@ -25,11 +25,13 @@ easy-thumbnails         #Thumbnail creation and management
 requests                #HTTP communications library
 django-celery           #Deffered/Scheduled tasks
 pysolr                  #Solr communication
+django-guardian         #Granular entity permissions
 
 #
 # Applications
 #
 django-userena          #Local user registration and management
+
 
 # Admin
 django-grappelli        #Admin UI replacement

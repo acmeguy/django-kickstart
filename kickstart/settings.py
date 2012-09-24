@@ -36,12 +36,12 @@ MANAGERS = ADMINS
 #
 # Localization
 #
-TIME_ZONE = 'Atlantic/Reykjavik' #todo replace this with your timezone
-LANGUAGE_CODE = 'is-is'          #todo replace this with your locale
-USE_I18N = True
-USE_L10N = True
-USE_TZ = True
-
+TIME_ZONE       = 'Atlantic/Reykjavik'  #todo replace this with your timezone
+LANGUAGE_CODE   = 'is-is'               #todo replace this with your locale
+USE_I18N        = True
+USE_L10N        = True
+USE_TZ          = True
+SKIN            = "kicktheme/"
 LANGUAGES = (
     ('is', 'Icelandic'),
     ('en', 'English'),
@@ -70,11 +70,18 @@ STATICFILES_FINDERS = (
 #
 
 
+#TEMPLATE_LOADERS = (
+#    ('django.template.loaders.cached.Loader', (
+#        'django.template.loaders.filesystem.Loader',
+#        'django.template.loaders.app_directories.Loader',
+#        )),
+#    )
+
 TEMPLATE_LOADERS = (
-    ('django.template.loaders.cached.Loader', (
+    (
         'django.template.loaders.filesystem.Loader',
         'django.template.loaders.app_directories.Loader',
-        )),
+        ),
     )
 
 
@@ -86,6 +93,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
     'django.core.context_processors.request',
     'django.core.context_processors.static',
+    'kickstart.web.context_processors.web_settings',
     )
 
 #
@@ -93,14 +101,14 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 #
 
 MIDDLEWARE_CLASSES = (
-    'django.middleware.cache.UpdateCacheMiddleware',
+    #'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware', #Clickjacking prevention
-    'django.middleware.cache.FetchFromCacheMiddleware',
+    #'django.middleware.cache.FetchFromCacheMiddleware',
     'waffle.middleware.WaffleMiddleware',
     )
 
