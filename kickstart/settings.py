@@ -70,20 +70,12 @@ STATICFILES_FINDERS = (
 #
 
 
-#TEMPLATE_LOADERS = (
-#    ('django.template.loaders.cached.Loader', (
-#        'django.template.loaders.filesystem.Loader',
-#        'django.template.loaders.app_directories.Loader',
-#        )),
-#    )
-
 TEMPLATE_LOADERS = (
-    (
+    ('django.template.loaders.cached.Loader', (
         'django.template.loaders.filesystem.Loader',
         'django.template.loaders.app_directories.Loader',
-        ),
+        )),
     )
-
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.debug',
@@ -101,7 +93,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 #
 
 MIDDLEWARE_CLASSES = (
-    #'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -187,6 +179,9 @@ INSTALLED_APPS = (
     'userena',
     'easy_thumbnails',
     'guardian',
+    #
+    #
+    #'gunicorn',
     )
 
 
@@ -308,36 +303,41 @@ RAVEN_CONFIG = {
 # Integration With Local Settings
 #
 
+USE_LOCAL_FILE = True
+#USE_LOCAL_FILE uses True by default but can be set to false to ignore local settings and testing production settings
+
+
 try:
     from .local_settings import *
     from .utils.merge import merge
 
-    try:
-        INSTALLED_APPS = INSTALLED_APPS + LOCAL_INSTALLED_APPS
-    except Exception, e:
-        pass
+    if USE_LOCAL_FILE:
+        try:
+            INSTALLED_APPS = INSTALLED_APPS + LOCAL_INSTALLED_APPS
+        except Exception, e:
+            pass
 
-    try:
-        TEMPLATE_DIRS = TEMPLATE_DIRS + LOCAL_TEMPLATE_DIRS
-    except Exception, e :
-        pass
+        try:
+            TEMPLATE_DIRS = TEMPLATE_DIRS + LOCAL_TEMPLATE_DIRS
+        except Exception, e :
+            pass
 
-    try:
-        MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + LOCAL_MIDDLEWARE_CLASSES
-    except Exception, e :
-        pass
+        try:
+            MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES + LOCAL_MIDDLEWARE_CLASSES
+        except Exception, e :
+            pass
 
-    try:
-        LOGGING = merge(LOGGING,LOCAL_LOG_OVERRIDE)
-    except Exception, e:
-        #print 'No local log settings found, is this production?'
-        pass
+        try:
+            LOGGING = merge(LOGGING,LOCAL_LOG_OVERRIDE)
+        except Exception, e:
+            #print 'No local log settings found, is this production?'
+            pass
 
 
-    try:
-        CACHES = merge(CACHES,LOCAL_CACHES)
-    except Exception, e:
-        pass
+        try:
+            CACHES = merge(CACHES,LOCAL_CACHES)
+        except Exception, e:
+            pass
 
 except Exception, e:
     import logging

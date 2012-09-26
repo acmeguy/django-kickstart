@@ -4,13 +4,9 @@
         </h1>
     </div>
     <ul class="thumbnails bordered thumbnail-list">
+        {% for item in "123" %}
         <li class="span4">
             {% include "web/elements/employee_overview.html" %}
         </li>
-        <li class="span4">
-            {% include "web/elements/employee_overview.html" %}
-        </li>
-        <li class="span4">
-            {% include "web/elements/employee_overview.html" %}
-        </li>
+        {% endfor %}
     </ul>
