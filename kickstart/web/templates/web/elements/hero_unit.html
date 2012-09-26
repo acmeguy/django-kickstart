@@ -1,3 +1,5 @@
+{% load webdesign web_extras %}
+
 <section id="promo" class="section alt">
     <div class="container">
         <div class="hero-unit">
@@ -9,10 +11,10 @@
             {% for hero_unit in hero_units %}
             <div class="well span3 pull-center">
                 <h3>
-                    <i class="icon-bullhorn huge-icon"></i>
-                    <span class="blocked">Kickstart</span>
+                    <i class="{% random_icon %} huge-icon"></i>
+                    <span class="blocked">{% lorem 1 w random %}</span>
                 </h3>
-                <p>Service description</p>
+                <p>{% lorem 3 w random %}</p>
             </div>
             {% endfor %}
         </div>

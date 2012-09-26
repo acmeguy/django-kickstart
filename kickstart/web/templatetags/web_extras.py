@@ -92,6 +92,8 @@ KNOWN_ICONS = [
     'icon-umbrella','icon-user-md'
 ]
 
+ALL_ICONS = CORP_ICONS + EDIT_ICONS + MEDIA_ICONS + INTERNET_ICONS + WEB_ICONS
+
 ICON_SETS = {
     'web':WEB_ICONS,
     'internet':INTERNET_ICONS,
@@ -102,4 +104,4 @@ ICON_SETS = {
 
 @register.simple_tag
 def random_icon(icon_set=None):
-    return random.sample(ICON_SETS.get(icon_set,KNOWN_ICONS),1)[0]
+    return random.sample(ICON_SETS.get(icon_set,ALL_ICONS),1)[0]
