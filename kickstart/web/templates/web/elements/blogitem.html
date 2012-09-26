@@ -7,15 +7,14 @@
     </header>
     <figure class="thumbnail-figure">
         <!--a href="post.html"><img src="{{ STATIC_URL }}{{ SKIN }}img/assets/people1-870x300.jpeg" alt=""></a-->
-        <a href="post.html"><img src="http://lorempixel.com/d/870/300/sports/" alt=""></a>
+        <a href="{% url web:blogpost forloop.revcounter %}"><img src="http://lorempixel.com/d/870/300/sports/{{ forloop.revcounter }}" alt=""></a>
         <figcaption class="thumbnail-title">
-            <h3><span>Lorem ipsum dolor sit amet</span></h3>
+            <h3><span>{% lorem 3 w random %}</span></h3>
         </figcaption>
     </figure>
     <p>
-        {% lorem 1 p random %}
-    </p>
-    <footer class="blog-footer row-fluid">
+        {% lorem 2 p random %}
+    </p>    <footer class="blog-footer row-fluid">
         <div class="span4 blog-categories">
             <i class="icon-pushpin"></i> <a href="#"> consectetur</a>
         </div>

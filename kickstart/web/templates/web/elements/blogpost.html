@@ -6,8 +6,8 @@
         </h2>
     </header>
     <figure class="thumbnail-figure">
-        <a href="post.html">
-            <img src="http://lorempixel.com/d/870/400/sports/1" alt="">
+        <a href="{% if forloop %}{% url web:blogpost forloop.revcounter %}{% endif %}">
+            <img src="http://lorempixel.com/d/870/400/sports/{{ forloop.revcounter }}" alt="">
         </a>
         <figcaption class="thumbnail-title">
             <h3>
@@ -22,7 +22,7 @@
             Vestibulum et dapibus orci. Vivamus non elit sed quam egestas egestas. Donec interdum ultrices ante ac pharetra. Praesent euismod augue erat, vel ornare sem. Morbi ante nisl, fringilla at commodo vitae, cursus aliquet lacus. Maecenas nec orci at est venenatis congue vitae eget justo. Aenean dui odio, eleifend sed viverra et, eleifend vitae tortor. Duis ac diam vitae risus aliquam tempor. Phasellus volutpat, metus porttitor ornare gravida, erat lacus bibendum lectus, et dictum tortor ligula a est. Proin id purus eget mi vestibulum accumsan. Nam scelerisque malesuada tellus vel laoreet. Vestibulum eleifend, risus ut faucibus iaculis, tellus lacus laoreet tellus, eget placerat tellus leo in magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sollicitudin blandit orci, at egestas tortor consectetur eu. Integer quam tellus, aliquet quis luctus id, porttitor eget eros. Fusce tempus metus metus.
         </p>
         <div class="span6">
-            <img src="http://lorempixel.com/d/400/400/sports/2" alt="">
+            <img src="http://lorempixel.com/d/400/400/sports/3" alt="">
         </div>
     </div>
     <p>{% lorem 1 p random %}</p>
