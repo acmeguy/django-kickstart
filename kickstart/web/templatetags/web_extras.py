@@ -10,6 +10,10 @@ CORP_ICONS = [
     'icon-facebook',
     'icon-github',
     'icon-linkedin',
+    'icon-google-plus-sign',
+    'icon-twitter-sign',
+    'icon-pinterest-sign',
+    'icon-github-sign',
     ]
 
 EDIT_ICONS = [
@@ -71,27 +75,31 @@ KNOWN_ICONS = [
     'icon-asterisk','icon-exclamation-sign','icon-gift','icon-leaf','icon-fire','icon-eye-open','icon-eye-close',
     'icon-warning-sign','icon-plane','icon-calendar','icon-random','icon-comment','icon-magnet','icon-chevron-up',
     'icon-chevron-down','icon-retweet','icon-shopping-cart','icon-folder-close','icon-folder-open',
-    'icon-resize-vertical''icon-resize-horizontal','icon-bar-chart','icon-twitter-sign','icon-facebook-sign',
+    'icon-resize-vertical''icon-resize-horizontal','icon-bar-chart','icon-facebook-sign',
     'icon-key','icon-cogs','icon-comments','icon-thumbs-up','icon-thumbs-down','icon-star-half',
     'icon-heart-empty','icon-linkedin-sign','icon-pushpin','icon-external-link','icon-signin',
-    'icon-trophy','icon-github-sign','icon-upload-alt','icon-lemon','icon-phone','icon-check-empty',
+    'icon-trophy','icon-upload-alt','icon-lemon','icon-phone','icon-check-empty',
     'icon-bookmark-empty','icon-phone-sign','icon-unlock',
     'icon-credit-card','icon-hdd','icon-bullhorn','icon-bell','icon-certificate','icon-hand-right',
     'icon-hand-left','icon-hand-up','icon-hand-down','icon-circle-arrow-left','icon-circle-arrow-right',
     'icon-circle-arrow-up','icon-circle-arrow-down','icon-globe','icon-wrench','icon-tasks','icon-filter',
     'icon-briefcase','icon-fullscreen','icon-group','icon-cloud','icon-beaker','icon-cut',
     'icon-paper-clip','icon-save','icon-sign-blank','icon-reorder','icon-list-ul','icon-list-ol',
-    'icon-magic','icon-truck','icon-pinterest-sign',
-    'icon-google-plus-sign','icon-money','icon-caret-down','icon-caret-up','icon-caret-left',
+    'icon-magic','icon-truck',
+    'icon-money','icon-caret-down','icon-caret-up','icon-caret-left',
     'icon-caret-right','icon-columns','icon-sort','icon-sort-down','icon-sort-up','icon-envelope-alt',
     'icon-undo','icon-legal','icon-dashboard','icon-comment-alt','icon-comments-alt','icon-bolt','icon-sitemap',
     'icon-umbrella','icon-user-md'
 ]
 
+ICON_SETS = {
+    'web':WEB_ICONS,
+    'internet':INTERNET_ICONS,
+    'corp':CORP_ICONS,
+    'media':MEDIA_ICONS,
+    'edit':EDIT_ICONS,
+}
+
 @register.simple_tag
-def random_icon(format_string=None):
-    #return random.sample(CORP_ICONS,1)[0]
-    if format_string == 'corp':
-        return random.sample(CORP_ICONS,1)[0]
-    else:
-        return random.sample(KNOWN_ICONS,1)[0]
+def random_icon(icon_set=None):
+    return random.sample(ICON_SETS.get(icon_set,KNOWN_ICONS),1)[0]
