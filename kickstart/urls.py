@@ -4,7 +4,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from tastypie.api import Api
 from filebrowser.sites import site
-
+from django.conf import settings
 admin.autodiscover()
 
 v1_api = Api(api_name='v1')
@@ -29,3 +29,7 @@ urlpatterns = patterns('',
     url(r'^', include('kickstart.web.urls',namespace='web')),
     #url(r'^$', 'kickstart.web.urls', name='web'),
 )
+
+#Gunicorn development settings which forces it to serve static files.
+if settings.DEBUG:
+    urlpatterns.append(url(r'^static/(?P<path>.*)$', 'django.views.static.serve',{'document_root': settings.STATIC_ROOT, 'show_indexes':True}))

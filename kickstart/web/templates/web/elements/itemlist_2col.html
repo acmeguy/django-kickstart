@@ -1,13 +1,15 @@
+{% load webdesign %}
+{% load web_extras %}
 <ul class="thumbnails bordered">
     <li class="span6">
         {% for item in items %}
         <div class="row-fluid">
             <div class="span4 pull-center">
-                <i class="icon-beaker enormous-icon circled  pull-center"></i>
+                <i class="{% random_icon "corp" %} enormous-icon circled pull-center"></i>
             </div>
             <div class="span8">
-                <h3> Web labs </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h3> {% lorem 2 w random %} </h3>
+                {% lorem 1 p random %}
             </div>
         </div>
         <hr>
@@ -17,11 +19,11 @@
         {% for item in items %}
         <div class="row-fluid">
             <div class="span4 pull-center">
-                <i class="icon-cloud enormous-icon circled  pull-center"></i>
+                <i class="{% random_icon "corp" %} enormous-icon circled pull-center"></i>
             </div>
             <div class="span8">
-                <h3> Cloud services </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h3> {% lorem 2 w random %} </h3>
+                {% lorem 1 p random %}
             </div>
         </div>
         <hr>

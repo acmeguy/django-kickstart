@@ -50,9 +50,9 @@ LANGUAGES = (
 #
 # Media files
 #
-MEDIA_ROOT = '/var/www/django/kickstart/media/' # Example: "/home/media/media.lawrence.com/media/" #todo replace this with your media root
+MEDIA_ROOT = '/var/www/django/django-kickstart/media/' # Example: "/home/media/media.lawrence.com/media/" #todo replace this with your media root
 MEDIA_URL = '' # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-STATIC_ROOT = '' # Example: "/home/media/media.lawrence.com/static/"
+STATIC_ROOT = '/var/www/django/django-kickstart/static/' # Example: "/home/media/media.lawrence.com/static/"
 STATIC_URL = '/static/' # Example: "http://media.lawrence.com/static/"
 
 # Additional locations of static files
@@ -181,7 +181,7 @@ INSTALLED_APPS = (
     'guardian',
     #
     #
-    #'gunicorn',
+    'gunicorn',
     )
 
 
