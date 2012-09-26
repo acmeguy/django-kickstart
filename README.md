@@ -90,6 +90,7 @@ Included Django packages
     * https://github.com/bread-and-pepper/django-userena/
     * http://docs.django-userena.org/en/latest/index.html
     * Installs: django-guardian (fine grained access control)
+    * (django-userena customized templates to use bootstrap with crispy forms)
 
 * django-redis
     * https://github.com/niwibe/django-redis
