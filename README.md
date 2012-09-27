@@ -2,16 +2,14 @@ django-kickstart
 ================
 
 An attempt to create a private django kickstart, please view this as "learn by doing" exercise rather than a viable
-option for anyone other than me. This project includes all my favorite django modules and is *my* ideal starting
-point for a web application project.
+option for anyone other than me. This project includes my favorite django modules making it my ideal starting
+point for elaborate web application projects.
 
 Goal
 ====
 Build a solid starting point for new, sizable, web projects with proven components, correctly configured and
- aligned to work well together. Have everything in place I like to have available when creating more complex web
- applications/services.
+aligned to work well together.
 
-Common ground:
 * Excellent development setup which handles all the debugging, profiling and exception handling needs
 * User management, registration and authentication from local or social sources
 * Modern architecture providing advanced solution building
@@ -21,7 +19,7 @@ Major Components/Servers
 
 * Django 1.4+
 * Redis - Site and session caching as well as message queue (RabbitMQ if huge/high availability messaging)
-* Posttgres - or a database of choice
+* Posttgres - or any database of choice
 * Solr - Advanced search
 * Sentry - Great exception logging and diagnostic
 * Node.js - Fan data out to all the connected clients from Redis messages sent by django apps
