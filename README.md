@@ -116,7 +116,7 @@ Redis
 
 Nodejs
 ======
-socketio_news
+
 ```
 # apt-get install build-essential g++ libssl-dev curl git
 # apt-get install python-software-properties
@@ -126,7 +126,7 @@ socketio_news
 npm install socket.io
 npm install redis
 ```
-view fan.js in the project root
+view fan.js in the project root and the socket.io code in the script_footer.html template
 
 
 PIL
