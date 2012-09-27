@@ -12,7 +12,7 @@ aligned to work well together.
 
 * Excellent development setup which handles all the debugging, profiling and exception handling needs
 * User management, registration and authentication from local or social sources
-* Modern architecture providing advanced solution building
+* Modern architecture providing advanced solution building capabilities
 
 Major Components/Servers
 ========================
