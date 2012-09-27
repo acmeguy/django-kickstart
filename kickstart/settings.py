@@ -125,7 +125,8 @@ ANONYMOUS_USER_ID = -1
 AUTH_PROFILE_MODULE = 'kickstart.KickstartUserProfile'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'kickstart.wsgi.application'
@@ -232,6 +233,9 @@ REDIS_CONNECT_RETRY             = True
 REDIS_HOST                      = "localhost"
 REDIS_PORT                      = 6379
 REDIS_DB                        = "0"
+
+#BROKER_URL                      = 'amqp://guest:guest@localhost:5672/'
+#BROKER_URL                      = 'redis://localhost:6379/'
 
 CELERY_SEND_EVENTS              = True
 CELERYD_LOG_LEVEL               = 'INFO'

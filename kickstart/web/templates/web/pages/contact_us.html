@@ -1,0 +1,29 @@
+{% extends "web/base.html" %}
+{% load i18n crispy_forms_tags %}
+
+{% block hero_unit %}
+    {% with "Talk is cheep..." as hero_title  %}
+    {% with "... but with us it's affective as well!" as hero_paragraph %}
+        {% include "web/elements/hero_unit.html" %}
+    {% endwith %}
+    {% endwith %}
+{% endblock %}
+
+{% block main_content %}
+    <section id="content" class="section" role="main">
+        <div class="container">
+            <div class="row-fluid">
+                <form action="" method="post">{% csrf_token %}
+                    <fieldset>
+                        <legend>{% trans "Send us an email" %}</legend>
+                        {{ form|crispy }}
+                        <button type="submit" class="btn btn-primary">{% trans "Email us" %}</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block sub_content %}
+{% endblock %}
