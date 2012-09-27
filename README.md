@@ -114,6 +114,20 @@ Handy information
 Redis
 =====
 
+Nodejs
+======
+socketio_news
+```
+# apt-get install build-essential g++ libssl-dev curl git
+# apt-get install python-software-properties
+# apt-add-repository ppa:chris-lea/node.js
+# apt-get update
+# apt-get install nodejs npm
+npm install socket.io
+npm install redis
+```
+view fan.js in the project root
+
 
 PIL
 ===
