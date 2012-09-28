@@ -21,7 +21,13 @@
     <div id="content" role="main">
         {% block hero_unit %}{% endblock %}
         {% block main_section %}
-        {% block main_content %}{% endblock %}
+        {% block main_content %}
+            <div class="container">
+                <div class="row-fluid">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        {% endblock %}
         {% endblock %}
         {% block sub_section %}
         <section class="section alt">

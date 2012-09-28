@@ -22,7 +22,7 @@ urlpatterns = patterns('',
     url(r'^admin/filebrowser/', include(site.urls)),
     url(r'^accounts/', include('userena.urls')),
     url(r'^redis/status/', include('redis_cache.stats.urls', namespace='redis_cache')),
-
+    url(r'^search/', include('haystack.urls')),
     #
     # Demo / reference content
     #

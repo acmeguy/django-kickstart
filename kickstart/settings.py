@@ -66,6 +66,28 @@ STATICFILES_FINDERS = (
     )
 
 #
+#  Search - HAYSTACK - Solr
+#
+#
+
+#Version 1.x
+HAYSTACK_SEARCH_ENGINE = 'solr'
+HAYSTACK_SITECONF = 'kickstart.search_confic'
+HAYSTACK_SOLR_URL = 'http://192.168.1.103:8983/solr/kickstart'
+
+#Version 2
+#HAYSTACK_CONNECTIONS = {
+#    'default': {
+#        'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+#        'URL': 'http://192.168.1.103:8983/solr/kickstart',
+#        'TIMEOUT': 60 * 5,
+#        'INCLUDE_SPELLING': True,
+#        'BATCH_SIZE': 100,
+#        #'EXCLUDED_INDEXES': ['thirdpartyapp.search_indexes.BarIndex'],
+#    },
+#}
+
+#
 # Templates
 #
 
@@ -166,6 +188,7 @@ INSTALLED_APPS = (
     #
     # Utilities - applications/packages
     #
+    'haystack',
     'redis_cache.stats',
     'tastypie',
     'crispy_forms',

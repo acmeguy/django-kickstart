@@ -1,0 +1,45 @@
+{% extends 'web/base.html' %}
+{% load i18n crispy_forms_tags %}
+
+{% block hero_unit %}
+    {% with "Needle Locatort 2000" as hero_title  %}
+        {% include "web/elements/hero_unit.html" %}
+    {% endwith %}
+{% endblock %}
+
+{% block content %}
+    <form method="get" action="." xmlns="http://www.w3.org/1999/html">
+        <fieldset>
+            <legend>Search</legend>
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-primary">{% trans "Search" %}</button>
+        </fieldset>
+
+        {% if query %}
+        </br>
+        <fieldset>
+            <legend>Results</legend>
+        </fieldset>
+            {% for result in page.object_list %}
+                <p>
+                    <a href="{{ result.object.get_absolute_url }}">{{ result.object.title }}</a>
+                </p>
+            {% empty %}
+                <p>No results found.</p>
+            {% endfor %}
+
+            {% if page.has_previous or page.has_next %}
+                <div>
+                    {% if page.has_previous %}<a href="?q={{ query }}&amp;page={{ page.previous_page_number }}">{% endif %}&laquo; Previous{% if page.has_previous %}</a>{% endif %}
+                    |
+                    {% if page.has_next %}<a href="?q={{ query }}&amp;page={{ page.next_page_number }}">{% endif %}Next &raquo;{% if page.has_next %}</a>{% endif %}
+                </div>
+            {% endif %}
+        {% else %}
+            {# Show some example queries to run, maybe query syntax, something else? #}
+        {% endif %}
+    </form>
+{% endblock %}
+
+{% block sub_section %}
+{% endblock %}

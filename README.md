@@ -21,7 +21,7 @@ Major Components/Servers
 * Redis - Site and session caching as well as message queue (RabbitMQ if huge/high availability messaging)
 * Posttgres - or any database of choice
 * Solr - Advanced search
-* Sentry - Great exception logging and diagnostic
+* Sentry - Great exception logging
 * Node.js - Fan data out to all the connected clients from Redis messages sent by django apps
 
 Included Django packages
