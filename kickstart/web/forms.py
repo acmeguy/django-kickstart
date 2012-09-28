@@ -15,3 +15,7 @@ class ContactUsForm(forms.Form):
         cc_myself = self.cleaned_data['cc_myself']
 
         send_email.delay('stebax@gmail.com',sender,subject,message,cc_myself)
+
+class FanOutForm(forms.Form):
+    message = forms.CharField(widget=forms.widgets.Textarea(attrs={'rows':4, 'cols':60}))
+

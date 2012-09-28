@@ -1,0 +1,27 @@
+{% extends "web/base.html" %}
+{% load i18n crispy_forms_tags %}
+
+{% block hero_unit %}
+    {% with "Messages in realtime ..." as hero_title  %}
+        {% include "web/elements/hero_unit.html" %}
+    {% endwith %}
+{% endblock %}
+
+{% block main_content %}
+    <section id="content" class="section" role="main">
+        <div class="container">
+            <div class="row-fluid">
+                <form action="" method="post">{% csrf_token %}
+                    <fieldset>
+                        <legend>{% trans "Send a message" %}</legend>
+                        {{ form|crispy }}
+                        <button type="submit" class="btn btn-primary">{% trans "Send" %}</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block sub_content %}
+{% endblock %}

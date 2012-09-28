@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, url
-from views import Home, ContactUs
+from views import Home, ContactUs, FanOut
 
 urlpatterns = patterns('',
     # Signup, signin and signout
@@ -14,4 +14,5 @@ urlpatterns = patterns('',
     url(r'^portfolio/(?P<slug>\w+)/$', Home.as_view(template_name="web/pages/portfolio_item.html"),name="portfolio"),
     url(r'^portfolio/', Home.as_view(template_name="web/pages/portfolio.html"),name="portfolio"),
     url(r'^contact/', ContactUs.as_view(),name="contact"),
+    url(r'^send_message/', FanOut.as_view(),name="contact"),
 )
