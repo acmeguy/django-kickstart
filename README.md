@@ -100,6 +100,10 @@ Included Django packages
     * https://bitbucket.org/zzzeek/dogpile.cache
     * http://dogpilecache.readthedocs.org/en/latest/index.html
 
+* dogslow - Performance watchdog
+    * https://bitbucket.org/evzijst/dogslow
+    * http://pypi.python.org/pypi/dogslow
+
 * django-celery - deferred/scheduled tasks
     * http://pypi.python.org/pypi/django-celery
     * Installs: kombu, anyjson, amqplib, billiard

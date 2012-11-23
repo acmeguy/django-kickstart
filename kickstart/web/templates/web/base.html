@@ -14,6 +14,8 @@
     {% include "web/snippets/style_header.html" %}
     <!-- smu -->
     {% include "web/snippets/script_header.html" %}
+    {% block script_header %}
+    {% endblock %}
 </head>
 <body class="theme">
     {% block page_header %}{% include "web/elements/page_header.html" %}{% endblock %}

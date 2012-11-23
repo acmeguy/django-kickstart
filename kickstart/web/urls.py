@@ -14,5 +14,7 @@ urlpatterns = patterns('',
     url(r'^portfolio/(?P<slug>\w+)/$', Home.as_view(template_name="web/pages/portfolio_item.html"),name="portfolio"),
     url(r'^portfolio/', Home.as_view(template_name="web/pages/portfolio.html"),name="portfolio"),
     url(r'^contact/', ContactUs.as_view(),name="contact"),
+    url(r'^video/', Home.as_view(template_name="web/pages/video.html"),name="video"),
+    url(r'^crossdomain.xml$', Home.as_view(template_name="web/pages/crossdomain.html"),name="video"),
     url(r'^send_message/', FanOut.as_view(),name="contact"),
 )

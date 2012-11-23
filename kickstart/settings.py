@@ -123,6 +123,7 @@ MIDDLEWARE_CLASSES = (
     #
     'raven.contrib.django.middleware.Sentry404CatchMiddleware',
     'raven.contrib.django.middleware.SentryResponseErrorIdMiddleware',
+    'dogslow.WatchdogMiddleware',
     #
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware', #Clickjacking prevention
@@ -276,7 +277,7 @@ SESSION_REDIS_DB                = 0
 SESSION_REDIS_PREFIX            = 'session'
 
 #
-# Logging
+# Logging & Monitoring
 #
 
 LOGGING = {
@@ -325,6 +326,17 @@ RAVEN_CONFIG = {
     'dsn': 'http://c606da0badfd4a2b9cea0e1c104a8248:1b1d01e94ddc4481940a1e69c17a684e@192.168.1.109:9000/2',
     'register_signals': True,
 }
+
+
+DOGSLOW = True # Watchdog is enabled by default, to temporarily disable, set to False:
+DOGSLOW_OUTPUT = '/tmp' # Location where Watchdog stores its log files:
+DOGSLOW_TIMER = 25 # Log requests taking longer than 25 seconds:
+DOGSLOW_EMAIL_TO = 'stebax@gmail.com' # When both specified, emails backtraces:
+DOGSLOW_EMAIL_FROM = 'stebax@gmail.com'
+DOGSLOW_LOGGER = 'sentry.errors' # Also log to this logger (defaults to none):
+DOGSLOW_LOG_LEVEL = 'WARNING'
+DOGSLOW_STACK_VARS = False # can become huge if set to true
+#DOGSLOW_IGNORE_URLS = ('some_view', 'other_view') # Tuple of url pattern names that should not be monitored:
 
 #
 # Integration With Local Settings
