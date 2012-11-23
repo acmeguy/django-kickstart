@@ -9,9 +9,9 @@ django-extensions       #plethora of goodies
 raven                   #sentry client for exception logging
 django-appconf          #App config
 django-waffle           #Feature flipping
-django-tastypie         #REST API
+#django-tastypie        #REST API
 gunicorn                #Multithreaded development server and then some
-#dogslow                 #Performance watchdog
+#dogslow                #Performance watchdog
 
 docutils                #For Django Documentation - http://docutils.sourceforge.net/
 pygments                #Documentation
