@@ -268,11 +268,6 @@ region = make_region().configure(
 #
 #
 #
-BROKER_BACKEND                  = "redis"
-BROKER_HOST                     = "localhost"
-BROKER_PORT                     = 6379
-BROKER_VHOST                    = "1"
-
 REDIS_CONNECT_RETRY             = True
 REDIS_HOST                      = "localhost"
 REDIS_PORT                      = 6379
@@ -282,7 +277,7 @@ REDIS_DB                        = "0"
 #BROKER_URL                      = 'redis://localhost:6379/'
 
 CELERY_SEND_EVENTS              = True
-CELERYD_LOG_LEVEL               = 'INFO'
+BROKER_URL                      = 'redis://localhost:6379/0'
 CELERY_RESULT_BACKEND           = "redis"
 CELERY_TASK_RESULT_EXPIRES      = 25
 CELERYD_CONCURRENCY             = 8
