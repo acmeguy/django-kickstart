@@ -273,11 +273,8 @@ REDIS_HOST                      = "localhost"
 REDIS_PORT                      = 6379
 REDIS_DB                        = "0"
 
-#BROKER_URL                      = 'amqp://guest:guest@localhost:5672/'
-#BROKER_URL                      = 'redis://localhost:6379/'
-
-CELERY_SEND_EVENTS              = True
 BROKER_URL                      = 'redis://localhost:6379/0'
+CELERY_SEND_EVENTS              = True
 CELERY_RESULT_BACKEND           = "redis"
 CELERY_TASK_RESULT_EXPIRES      = 25
 CELERYD_CONCURRENCY             = 8
