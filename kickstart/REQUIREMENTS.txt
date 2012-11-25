@@ -9,12 +9,19 @@ django-extensions       #plethora of goodies
 raven                   #sentry client for exception logging
 django-appconf          #App config
 django-waffle           #Feature flipping
-#django-tastypie        #REST API
 gunicorn                #Multithreaded development server and then some
 #dogslow                #Performance watchdog
 
 docutils                #For Django Documentation - http://docutils.sourceforge.net/
 pygments                #Documentation
+
+#
+# API
+#
+djangorestframework
+markdown                # Markdown support for the browseable API.
+pyyaml                  # YAML content-type support.
+django-filter           # Filtering support
 
 #
 # Infrastructure

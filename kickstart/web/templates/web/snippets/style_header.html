@@ -1,12 +1,15 @@
+{% load compress %}
         <link rel="shortcut icon" href="{{ STATIC_URL }}{{ SKIN }}favicon.ico">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ STATIC_URL }}{{ SKIN }}img/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}{{ SKIN }}img/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}{{ SKIN }}img/ico/apple-touch-icon-72-precomposed.png">
         <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}{{ SKIN }}img/ico/apple-touch-icon-57-precomposed.png">
 
-        <!-- {{ SKIN }} -->
+        <!-- snu: {{ SKIN }} -->
+        {% compress css %}
         <link rel="stylesheet" href="{{ STATIC_URL }}{{ SKIN }}css/bootstrap.css">
         <link rel="stylesheet" href="{{ STATIC_URL }}{{ SKIN }}css/responsive.css">
         <link rel="stylesheet" href="{{ STATIC_URL }}{{ SKIN }}css/font-awesome.css">
         <link rel="stylesheet" href="{{ STATIC_URL }}{{ SKIN }}css/theme.css">
         <link rel="stylesheet" href="{{ STATIC_URL }}{{ SKIN }}css/fonts.css">
+        {% endcompress %}

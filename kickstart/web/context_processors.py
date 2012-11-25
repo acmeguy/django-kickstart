@@ -2,5 +2,4 @@
 from django.conf import settings
 
 def web_settings(request):
-    print settings.SKIN
-    return {'SKIN': settings.SKIN }
+    return {'SKIN': settings.SKIN, 'NODEJS_FANOUT': settings.NODEJS_FANOUT }

@@ -5,6 +5,8 @@
 #
 DEBUG = False #todo - see local_settings.py for overrides
 TEMPLATE_DEBUG = DEBUG
+COMPRESS_ENABLED = True
+NODEJS_FANOUT = False
 
 #
 # Database connections
@@ -63,6 +65,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
     )
 
 #
@@ -109,6 +112,11 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'kickstart.web.context_processors.web_settings',
     )
+
+COMPRESS_CSS_FILTERS = [
+    'compressor.filters.css_default.CssAbsoluteFilter',
+    #'compressor.filters.cssmin.CSSMinFilter',
+]
 
 #
 # Middleware
@@ -193,12 +201,15 @@ INSTALLED_APPS = (
     'redis_cache.stats',
     'tastypie',
     'crispy_forms',
+    'rest_framework',
+    'compressor',
     #
     # Kickstart - Application
     #
     #todo - change these according to your needs
     'kickstart',
     'kickstart.web',
+    'kickstart.api',
     #
     #
     'userena',
@@ -217,6 +228,15 @@ INSTALLED_APPS = (
 GRAPPELLI_ADMIN_TITLE = 'Kickstart Admin'
 AUTOCOMPLETE_LIMIT = 20
 
+
+#
+# API
+#
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'PAGINATE_BY': 10,
+    'FILTER_BACKEND': 'rest_framework.filters.DjangoFilterBackend',
+}
 
 #
 # Caching

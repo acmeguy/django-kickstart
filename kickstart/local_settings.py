@@ -3,7 +3,7 @@
 # always represents a production state. Values here are merged with the main settings file.
 # Settings can be replace all together, using the same variable names as in settings.py, or merged using the LOCAL_ prefix.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 DATABASES = {

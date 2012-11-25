@@ -1,9 +1,9 @@
+{% load compress %}
     <!-- scripts -->
+    {% compress js %}
     <script src="{{ STATIC_URL }}{{ SKIN }}js/jquery-1.8.2.min.js"></script>
     <script src="{{ STATIC_URL }}{{ SKIN }}js/bootstrap.min.js"></script>
     <script src="{{ STATIC_URL }}{{ SKIN }}js/script.js"></script>
-    <script src="http://localhost:8001/socket.io/socket.io.js"></script>
-    <script src="http://localhost:8001/socket.io/socket.io.js"></script>
     <script>
         var socket = io.connect('http://localhost:8001');
         socket.on('socketio_news', function (data) {
@@ -11,5 +11,9 @@
             //socket.emit('my other event', { my: 'data' });
         });
     </script>
+    {% endcompress %}{% if NODEJS_FANOUT %}
+    <script src="http://localhost:8001/socket.io/socket.io.js"></script>
+    <script src="http://localhost:8001/socket.io/socket.io.js"></script>
+    {% endif %}
     <!-- end scripts -->
 
