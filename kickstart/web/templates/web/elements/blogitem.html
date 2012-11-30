@@ -6,8 +6,8 @@
         </h2>
     </header>
     <figure class="thumbnail-figure">
-        <!--a href="post.html"><img src="{{ STATIC_URL }}{{ SKIN }}img/assets/people1-870x300.jpeg" alt=""></a-->
-        <a href="{% url web:blogpost forloop.revcounter %}"><img src="http://lorempixel.com/d/870/300/sports/{{ forloop.revcounter }}" alt=""></a>
+        <!--a href="post.html"><img src="{{ STATIC_URL }}kicktheme/img/assets/people1-870x300.jpeg" alt=""></a-->
+        <a href="{% url web:blogpost forloop.revcounter %}"><img src="/extmedia/d/870/300/sports/{{ forloop.revcounter }}/" alt=""></a>
         <figcaption class="thumbnail-title">
             <h3><span>{% lorem 3 w random %}</span></h3>
         </figcaption>

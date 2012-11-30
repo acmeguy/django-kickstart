@@ -1,5 +1,7 @@
 {% extends "web/base.html" %}
 
+{% block title %}About us {{ block.super }}{% endblock %}
+
 {% block hero_unit %}
     {% with "Making sure it's done right" as hero_title  %}
         {% include "web/elements/hero_unit.html" %}

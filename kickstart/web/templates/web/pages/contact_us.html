@@ -1,6 +1,8 @@
 {% extends "web/base.html" %}
 {% load i18n crispy_forms_tags %}
 
+{% block title %}Contact us {{ block.super }}{% endblock %}
+
 {% block hero_unit %}
     {% with "Talk is cheep..." as hero_title  %}
     {% with "... but with us it's affective as well!" as hero_paragraph %}

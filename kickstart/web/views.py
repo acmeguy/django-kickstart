@@ -1,8 +1,10 @@
 # some_app/views.py
 from django.views.generic import TemplateView, FormView
 from kickstart.web.forms import ContactUsForm, FanOutForm
+from django.views.decorators.cache import cache_page
 import redis
 import json
+
 
 class Home(TemplateView):
     template_name = "web/pages/about_us.html"

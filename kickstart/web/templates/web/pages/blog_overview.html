@@ -1,5 +1,7 @@
 {% extends "web/base_rcol.html" %}
 
+{% block title %}Rants, raves and some useful stuff {{ block.super }}{% endblock %}
+
 {% block hero_unit %}
     {% with "Our news" as hero_title %}
         {% include "web/elements/hero_unit.html" %}

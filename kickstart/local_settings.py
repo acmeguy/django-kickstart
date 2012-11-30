@@ -8,7 +8,6 @@ TEMPLATE_DEBUG = DEBUG
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'kickstart_db', # Or path to database file if using sqlite3.
         'USER': 'kickstart', # Not used with sqlite3.
@@ -38,10 +37,10 @@ LOCAL_MIDDLEWARE_CLASSES = (
     )
 
 LOCAL_CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-        'LOCATION': '127.0.0.1:11211',
-    }
+#    'default': {
+#        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+#        'LOCATION': '127.0.0.1:11211',
+#    }
 }
 
 #

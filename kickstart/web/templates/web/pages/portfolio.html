@@ -1,5 +1,7 @@
 {% extends "web/base.html" %}
 
+{% block title %}Stuff we have made {{ block.super }}{% endblock %}
+
 {% block hero_unit %}
     {% with "Timemachine" as hero_title  %}
         {% include "web/elements/hero_unit.html" %}

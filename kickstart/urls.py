@@ -24,9 +24,15 @@ urlpatterns = patterns('',
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
     #
+    # Proxy
+    #
+    url(r'^extmedia/(?P<url>.*)$', 'httpproxy.views.proxy'),
+
+    #
     # Demo / reference content
     #
     url(r'^', include('kickstart.web.urls',namespace='web')),
+
 )
 
 #Gunicorn development settings which forces it to serve static files.

@@ -1,5 +1,8 @@
 {% extends "web/base.html" %}
 {% load webdesign %}
+
+{% block title %}Welcome {{ block.super }}{% endblock %}
+
 {% block hero_unit %}
     <section id="promo" class="section alt">
         <div class="container">
@@ -15,7 +18,7 @@
                                 </div>
                             </div>
                             <div class="span5">
-                                <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/imac.png" alt="imac" class="pull-right">
+                                <img src="{{ STATIC_URL }}kicktheme/img/assets/imac.png" alt="imac" class="pull-right">
                             </div>
                         </div>
 
@@ -61,7 +64,7 @@
                                 </div>
                             </div>
                             <div class="span5">
-                                <img src="{{ STATIC_URL }}{{ SKIN }}img/assets/iphone.png" alt="imac" class="pull-right">
+                                <img src="{{ STATIC_URL }}kicktheme/img/assets/iphone.png" alt="imac" class="pull-right">
                             </div>
                         </div>
                     </div>
@@ -88,14 +91,14 @@
         <div class="container">
             <div class="page-header">
                 <h1>
-                    Who are we? <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
+                    Who are weeee? <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</small>
                 </h1>
             </div>
             <ul class="thumbnails bordered thumbnail-list">
                 <li class="span4">
                     <a href="{% url web:about %}">
                         <figure class="thumbnail-figure">
-                            <img src="http://lorempixel.com/d/600/400/sports/1" alt="">
+                            <img src="/extmedia/d/600/400/sports/1/" alt="">
                             <figcaption class="thumbnail-title">
                                 <h3><span>Betty Doe</span></h3>
                                 <p><span>Managing director</span></p>
@@ -109,7 +112,7 @@
                 <li class="span4">
                     <a href="{% url web:about %}">
                         <figure class="thumbnail-figure">
-                            <img src="http://lorempixel.com/d/600/400/sports/2" alt="">
+                            <img src="/extmedia/d/600/400/sports/2/" alt="">
                             <figcaption class="thumbnail-title">
                                 <h3><span>Mary Doe</span></h3>
                                 <p><span>Assistant director</span></p>
@@ -123,7 +126,7 @@
                 <li class="span4">
                     <a href="{% url web:about %}">
                         <figure class="thumbnail-figure">
-                            <img src="http://lorempixel.com/d/600/400/sports/3" alt="">
+                            <img src="/extmedia/d/600/400/sports/3/" alt="">
                             <figcaption class="thumbnail-title">
                                 <h3><span>Sue Doe</span></h3>
                                 <p><span>SEO manager</span></p>

@@ -1,5 +1,7 @@
 {% extends "web/base_rcol.html" %}
 
+{% block title %}Some answers {{ block.super }}{% endblock %}
+
 {% block hero_unit %}
     <div id="content" role="main">
         {% with "Not so frequently asked questions" as hero_title  %}

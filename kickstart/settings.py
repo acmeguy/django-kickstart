@@ -3,9 +3,9 @@
 #
 # Start configuration by declaring the debuging state
 #
-DEBUG = False #todo - see local_settings.py for overrides
+DEBUG = True #todo - see local_settings.py for overrides
 TEMPLATE_DEBUG = DEBUG
-COMPRESS_ENABLED = True
+COMPRESS_ENABLED = False
 NODEJS_FANOUT = False
 
 #
@@ -123,20 +123,31 @@ COMPRESS_CSS_FILTERS = [
 #
 
 MIDDLEWARE_CLASSES = (
+    #
+    # Caching
+    #
     'django.middleware.cache.UpdateCacheMiddleware',
+    #'django.middleware.cache.FetchFromCacheMiddleware',
+    #'django.middleware.http.ConditionalGetMiddleware',
+    #
+    #
+    #
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     #
+    # Debugging and monitoring
+    #
     'raven.contrib.django.middleware.Sentry404CatchMiddleware',
     'raven.contrib.django.middleware.SentryResponseErrorIdMiddleware',
-    'dogslow.WatchdogMiddleware',
-    #
+    #'dogslow.WatchdogMiddleware',
+
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware', #Clickjacking prevention
-    'django.middleware.cache.FetchFromCacheMiddleware',
+
     'waffle.middleware.WaffleMiddleware',
+    'django.middleware.gzip.GZipMiddleware',
     )
 
 #
@@ -190,6 +201,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'raven.contrib.django',
+    'httpproxy',
     #
     # Development Utilities
     #
@@ -241,14 +253,18 @@ REST_FRAMEWORK = {
 #
 # Caching
 #
-
 CACHES = {
     'default': {
         'BACKEND': 'redis_cache.cache.RedisCache',
-        'LOCATION': 'localhost:6379',
+        'LOCATION': '127.0.0.1:6379:1',
         'OPTIONS': {'DB': 1,},
     },
 }
+
+#
+# Proxy
+#
+PROXY_DOMAIN = 'www.lorempixel.com'
 
 """
 from dogpile.cache import make_region
