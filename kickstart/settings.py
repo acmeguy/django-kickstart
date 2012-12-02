@@ -196,7 +196,6 @@ INSTALLED_APPS = (
     # Madnatory placement for devserver, django-grapelli & filebrowser
     'devserver',
     'grappelli',
-    'kickstart.uwsgi_admin',
     'djcelery',
     'filebrowser',
     'django.contrib.admin',
