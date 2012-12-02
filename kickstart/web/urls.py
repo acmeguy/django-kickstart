@@ -21,3 +21,4 @@ urlpatterns = patterns('',
     url(r'^video/', cache_page(Home.as_view(template_name="web/pages/video.html"), CACHE_PERIOD), name='video'),
     url(r'^send_message/', FanOut.as_view(),name="contact"),
 )
+
