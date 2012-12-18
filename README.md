@@ -1,7 +1,7 @@
 django-kickstart
 ================
 
-An attempt to create a private django kickstart, please view this as "learn by doing" exercise rather than a viable
+An attempt to create a private django based kickstart, please view this as "learn by doing" exercise rather than a viable
 option for anyone other than me. This project includes my favorite django modules making it my ideal starting
 point for elaborate web application projects.
 
@@ -13,16 +13,17 @@ aligned to work well together.
 * Excellent development setup which handles all the debugging, profiling and exception handling needs
 * User management, registration and authentication from local or social sources
 * Modern architecture providing advanced solution building capabilities
+* Nginx + uwsgi config as fat-free delivery recipe
 
 Major Components/Servers
 ========================
 
 * Django 1.4+
-* Redis - Site and session caching as well as message queue (RabbitMQ if huge/high availability messaging)
-* Posttgres - or any database of choice
-* Solr - Advanced search
-* Sentry - Great exception logging
-* Node.js - Fan data out to all the connected clients from Redis messages sent by django apps
+* Redis         - Site and session caching as well as message queue (RabbitMQ if huge/high availability messaging)
+* Solr          - Advanced search
+* Sentry        - Great exception logging
+* Node.js       - Fan data out to all the connected clients from Redis messages sent by django apps
+* Posttgres     - or any database of choice
 
 Included Django packages
 ========================
@@ -59,6 +60,9 @@ Included Django packages
     * http://packages.python.org/django-extensions
     * # apt-get install libgraphviz-dev
     * pip install pygraphviz
+
+* django-compressor - Compression of CSS, LESS and js for fastest delivery
+    * http://django_compressor.readthedocs.org/en/latest/
 
 * django-waffle - feature flipping is nice to have when moving fast
     * https://github.com/jsocol/django-waffle

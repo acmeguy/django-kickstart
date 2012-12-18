@@ -26,7 +26,8 @@ django-filter           # Filtering support
 #
 # Infrastructure
 #
-SQLAlchemy              #Optional ORM for heavy lifting
+#SQLAlchemy              #Optional ORM for heavy lifting
+http://sourceforge.net/projects/sqlalchemy/files/latest/download?source=dlp#egg=sqlalchemy -vvv
 lxml                    #XML manipulation
 django-redis-sessions   #Redis session backend
 django-crispy-forms     #Better forms handling and bootstrap support
@@ -34,7 +35,9 @@ easy-thumbnails         #Thumbnail creation and management
 requests                #HTTP communications library
 django-celery           #Deffered/Scheduled tasks
 pysolr                  #Solr communication
+sunburnt                #Solr communication (new)
 django-guardian         #Granular entity permissions
+django-compressor       #Preprocess CSS, LESS and js for fastest delivery
 
 #
 # Applications

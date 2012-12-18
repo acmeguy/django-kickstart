@@ -3,9 +3,9 @@
 #
 # Start configuration by declaring the debuging state
 #
-DEBUG = True #todo - see local_settings.py for overrides
+DEBUG = False #todo - see local_settings.py for overrides
 TEMPLATE_DEBUG = DEBUG
-COMPRESS_ENABLED = False
+COMPRESS_ENABLED = True
 NODEJS_FANOUT = False
 
 #
