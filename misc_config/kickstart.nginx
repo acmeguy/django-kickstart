@@ -1,0 +1,23 @@
+server {
+    listen      80;
+    server_name localhost;
+    access_log  /var/log/nginx/localhost.log;
+
+    location /media {
+        alias /var/www/django/django-kickstart/media/;
+        if ($request_uri ~ \.(png|jpg|gif|css|js|woff)) {
+            expires     1w;
+        }
+    }
+    location /static {
+        alias /var/www/django/django-kickstart/static/;
+        if ($request_uri ~ \.(png|jpg|gif|js|css|woff)) {
+            expires     1w;
+        }
+    }
+
+    location / {
+        uwsgi_pass unix:///run/uwsgi/app/kickstart/socket;
+        include uwsgi_params;
+    }
+}
